@@ -66,7 +66,7 @@
 - お酒の器の量(缶350mL・1合180mL など)は器の容量で、健康の目安ではない。
 
 ## 3. 作ったもの
-Capacitor 8 + React 19 + Vite + TypeScript(お手本: 管理栄養士国試アプリの作り)。appId jp.urica.techo。サーバーなし・アカウントなし・広告なし。
+Capacitor 8 + React 19 + Vite + TypeScript(お手本: 管理栄養士国試アプリの作り)。appId jp.urica.app。サーバーなし・アカウントなし・広告なし。
 
 | 機能 | 無料 | 完全版 |
 |---|---|---|
@@ -95,10 +95,26 @@ Capacitor 8 + React 19 + Vite + TypeScript(お手本: 管理栄養士国試ア�
 5. ストア素材: store\icon-1024.png・play-icon-512.png・play-feature-1024x500.png・ios\shot_1〜5(1290x2796)・play\shot_1〜5(1080x1920)・listing.md(題名・サブタイトル・説明・キーワード)。作り直しは `python scripts\store_shots.py`
 6. store\privacy.md(端末内保存・収集しない・RevenueCat の扱い)
 
-## 5. 残り(持ち主の作業)
+## 5. iOS と Android(2026-10-04 追加ルール 02_iOSとAndroidの追加ルール.md)
+- appId / Bundle ID: jp.urica.app(表示名 ウリカ手帳)。`npx cap add android`・`npx cap add ios`・`npx cap sync` 済み
+- アイコンと起動画面: `python scripts\native_assets.py` でロゴから作り直し(Capacitor の既定の絵は残していない。目で確認済み)
+- Android
+  - 署名済み AAB: releases\urica-release.aab(versionCode 1 / versionName 1.0.0 / targetSdk 36 / minSdk 24)。動作確認用 APK: releases\urica-release.apk
+  - 作り方: `npm run build` → `npx cap sync android` → `powershell -ExecutionPolicy Bypass -File scripts\build-android.ps1`(JDK・SDK は DiamondNineBuild を読むだけ。subst の空きドライブで英字パスにして、終わったら外す)
+  - 署名鍵: %LOCALAPPDATA%\UricaBuild\signing\urica-upload.jks(alias urica-upload)。パスワードは同じフォルダの upload-password.dpapi(DPAPI。このWindowsユーザーだけが復号できる)。作り直さない・上書きしない。PC を替える前にフォルダごと控える
+  - 確認: `jarsigner -verify` → jar verified(自己署名の警告は アップロード鍵では普通)/ `apksigner verify` OK / aapt2 で package jp.urica.app・versionCode 1・ラベル ウリカ手帳 / AAB の中の画面が最新の dist と同じ(index の名前一致、見本データは入っていない)
+  - 権限: INTERNET・POST_NOTIFICATIONS(お薬のお知らせ)。通知の部品が RECEIVE_BOOT_COMPLETED・WAKE_LOCK・SCHEDULE_EXACT_ALARM を、課金の部品が BILLING を足す
+  - 次に出すときは android\app\build.gradle の versionCode を上げる
+- iOS
+  - .github\workflows\ios-testflight.yml(ニガテ帳の物を写し、このアプリの ios\App\App.xcodeproj と ios\ExportOptions.plist に直した。compile_only で署名なしのコンパイルだけも可)。push はしていない
+  - Info.plist: 表示名 ウリカ手帳・開発地域 ja・ITSAppUsesNonExemptEncryption false。カメラ・写真・位置は使わないので説明文は無し。通知は iOS に Info.plist の説明欄が無いため、アプリの「通知」画面に「オンにすると許可を聞かれる・お薬と検査日のお知らせにだけ使う」と説明を出した
+  - MARKETING_VERSION 1.0.0、ビルド番号は CI の実行番号
+- Play の掲載一式: store\play\(listing.txt・icon_512.png・feature_1024x500.png・screenshots\shot_1〜5.png・privacy.md・data_safety.md・content_rating.md)。テスター募集の下書き: store\tester_post.txt
+
+## 6. 残り(持ち主の作業)
 1. privacy.md の問い合わせ先を記入し、公開ページ(GitHub Pages 等)に置く。サポートURLも同じ所に
-2. App Store Connect でアプリ作成(Bundle ID jp.urica.techo)、非消耗型 urica_full を ¥800 で作成。カテゴリはメディカル
+2. App Store Connect でアプリ作成(Bundle ID jp.urica.app)、非消耗型 urica_full を ¥800 で作成。カテゴリはメディカル
 3. RevenueCat にアプリを足し、entitlement "full"・Offering "default"(パッケージ1つ)→ 公開APIキーを src\billing.config.json へ
-4. `npx cap add ios` / `npx cap add android` → `npm run sync`。iOS は Info.plist に通知の説明は不要(ローカル通知)。Android 13 以降は通知の許可がアプリ内で出る
-5. iOS ビルド(ニガテ帳と同じクラウド Mac の手順)、TestFlight で通知の時刻・共有シートでの書き出し・ファイル選択での読み込みを実機確認(ブラウザでは確かめられない部分)
-6. 実機でまだ確かめていないこと: ネイティブの通知予約・Share での書き出し・購入と復元
+4. Play Console でアプリを作り(jp.urica.app)、releases\urica-release.aab をクローズドテストに上げる。テスター用の Google グループを作り、store\tester_post.txt の URL 欄を埋めて募集する(12人×14日)
+5. iOS: このフォルダを非公開リポジトリに push し、Actions の iOS TestFlight を compile_only で1回 → 通ったら本番で TestFlight へ(シークレット4つはニガテ帳と同じ)
+6. 実機でまだ確かめていないこと(エミュレーター・実機が無いため): 通知の予約と許可の聞き方・共有シートでの書き出し・ファイル選択での読み込み・購入と復元。APK を手元の Android に入れて確かめるのが早い

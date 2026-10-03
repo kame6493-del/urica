@@ -9,3 +9,6 @@ store/raw/
 *.jks
 *.keystore
 *.p8
+releases/
+android/local.properties
+*.dpapi

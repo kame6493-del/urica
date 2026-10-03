@@ -101,6 +101,7 @@ export function NotifyPage(p: { data: AppData; premium: boolean; update: Update;
     <div className="page sub notify">
       <TopBar title="通知" onBack={p.onBack} />
       {!p.notifyOk && <div className="notice" style={{ background: 'var(--coral-soft)' }}>通知が許可されていません。端末の設定でこのアプリの通知をオンにしてください。</div>}
+      <div className="notice">オンにすると、端末から「通知を許可しますか」と聞かれます。お薬の時間と検査日のお知らせにだけ使い、広告や宣伝の通知は送りません。通知は端末の中で予約し、外へは送りません。</div>
       <section className="card">
         <h2>1日1回のお知らせ</h2>
         <label className="check-line"><input type="checkbox" checked={s.remindOn} onChange={(e) => set({ remindOn: e.target.checked })} />お薬のお知らせを受け取る</label>

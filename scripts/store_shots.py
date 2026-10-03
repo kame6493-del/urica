@@ -10,7 +10,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STORE = os.path.join(ROOT, "store")
-for d in ["ios", "play"]:
+for d in ["ios", "play", os.path.join("play", "screenshots")]:
     os.makedirs(os.path.join(STORE, d), exist_ok=True)
 
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
@@ -83,7 +83,7 @@ def main():
             pg.screenshot(path=os.path.join(STORE, "icon-1024.png"))
             pg.set_viewport_size({"width": 512, "height": 512})
             pg.set_content(f"<html><body style='margin:0'>{LOGO.format(s=512, rx=0)}</body></html>")
-            pg.screenshot(path=os.path.join(STORE, "play-icon-512.png"))
+            pg.screenshot(path=os.path.join(STORE, "play", "icon_512.png"))
             # Play のフィーチャー画像
             pg.set_viewport_size({"width": 1024, "height": 500})
             # style 属性の中に FONT の二重引用符を入れると属性が切れるので、style 要素に書く
@@ -93,7 +93,7 @@ body{{margin:0;width:1024px;height:500px;background:linear-gradient(160deg,#2c6e
 </style></head><body>{LOGO.format(s=200, rx=24)}
 <div><div class="t">ウリカ手帳</div><div class="s">尿酸値と痛風の、毎日の記録帳</div>
 <div class="f">尿酸値のグラフ・お薬・水分・お酒・発作・受診用のまとめ</div></div></body></html>""")
-            pg.screenshot(path=os.path.join(STORE, "play-feature-1024x500.png"))
+            pg.screenshot(path=os.path.join(STORE, "play", "feature_1024x500.png"))
             pg.close()
 
             for target, (w, h, dpr, app_w) in {"ios": (430, 932, 3, 390), "play": (360, 640, 3, 390)}.items():
@@ -104,7 +104,7 @@ body{{margin:0;width:1024px;height:500px;background:linear-gradient(160deg,#2c6e
                     frame = page.frames[1]
                     frame.wait_for_load_state()
                     drive(frame, kind)
-                    page.screenshot(path=os.path.join(STORE, target, f"shot_{i}.png"))
+                    page.screenshot(path=os.path.join(STORE, target, *(["screenshots"] if target == "play" else []), f"shot_{i}.png"))
                     ctx.close()
                     print("saved", target, i, kind)
             b.close()

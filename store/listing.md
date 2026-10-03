@@ -49,6 +49,7 @@
 App Store: メディカル(副: ヘルスケア/フィットネス) / Play: 医療
 
 ## 素材
-- アイコン: icon-1024.png(App Store)/ play-icon-512.png
-- フィーチャー画像: play-feature-1024x500.png
-- 画面写真: ios/shot_1〜5.png(1290x2796)/ play/shot_1〜5.png(1080x1920)。見本の記録は架空
+- アイコン: icon-1024.png(App Store)/ play/icon_512.png
+- フィーチャー画像: play/feature_1024x500.png
+- 画面写真: ios/shot_1〜5.png(1290x2796)/ play/screenshots/shot_1〜5.png(1080x1920)。見本の記録は架空
+- Play の掲載一式(題名・説明・データセーフティ・レーティングの回答案・プライバシー): play/
