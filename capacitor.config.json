@@ -1,0 +1,8 @@
+{
+  "appId": "jp.urica.techo",
+  "appName": "ウリカ手帳",
+  "webDir": "dist",
+  "backgroundColor": "#f6f4ef",
+  "ios": { "contentInset": "never" },
+  "android": { "allowMixedContent": false }
+}

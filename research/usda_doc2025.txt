@@ -1,0 +1,1085 @@
+1 
+ 
+USDA and ODS-NIH Database  
+for the Purine Content of Foods 
+Release 2.0 
+Prepared by: 
+Katherine C. Heydorn1A, Xianli Wu1, Timothy J. Garrett2, Manasi Kamat2, 
+Deepesh Pandey1A, Suma Vavilala1A, Johanna Dwyer3A, Edwina Wambogo3, 
+Abby G. Ershow3A*, Leslie D. Thompson4, Stephen P. Juraschek5,  
+Pamela R. Pehrsson1 
+1 Methods and Application of Food Composition Laboratory 
+Agricultural Research Service 
+U.S. Department of Agriculture (USDA) 
+ 
+2 Clinical and Translational Science Institute Southeast Center for Integrated Metabolomics (CTSI-SECIM) 
+University of Florida (UF)  
+ 
+3 Office of Dietary Supplements 
+National Institutes of Health (NIH) 
+ 
+4 Department of Animal and Food Sciences, Texas Tech University (TTU) 
+5 Beth Israel Deaconess Medical Center and Harvard Medical School 
+* Retired 
+A Contractor 
+March 2025 
+U.S. Department of Agriculture 
+Agricultural Research Service 
+Beltsville Human Nutrition Research Center 
+Methods and Application of Food Composition Laboratory (MAFCL) 
+10300 Baltimore Avenue 
+Building 005, Room 107, BARC – West 
+Beltsville, Maryland 20705 Tel. 301-504-0630  
+MAFCL web site: https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-
+research-center/methods-and-application-of-food-composition-laboratory/  
+FoodData Central database web site: https://fdc.nal.usda.gov/ 
+Supported by: National Institutes of Health-Office of Dietary Supplements (NIH-ODS) and the U.S. 
+Department of Agriculture (USDA) 
+The authors gratefully acknowledge Ms. Janet Roseland, Dr. Pavel Gusev, Ms. Karen Andrews, and Dr. 
+Adam Kuszak for their contributions to and review of this document. The authors also acknowledge Dr. 
+Katherine Phillips, Virginia Tech, for preparation of the USDA samples.
+2 
+ 
+Disclaimer: 
+The U.S. Department of Agriculture (USDA) prohibits discrimination in all its programs and activities on 
+the basis of race, color, national origin, age, disability, and where applicable, sex, marital status, familial 
+status, parental status, religion, sexual orientation, genetic information, political beliefs, reprisal, or 
+because all or a part of an individual's income is derived from any public assistance program. (Not all 
+prohibited bases apply to all programs.) Persons with disabilities who require alternative means for 
+communication of program information (Braille, large print, audiotape, etc.) should contact USDA's 
+TARGET Center at (202) 720-2600 (voice and TDD). To file a complaint of discrimination, write to 
+USDA, Director, Office of Civil Rights, 1400 Independence Avenue, S.W., Washington, DC 20250-9410 
+or call (800) 795-3272 (voice), or (202) 720-6382 (TDD). USDA is an equal opportunity provider and 
+employer. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+List of Abbreviations: 
+ 
+Abbreviation Definition 
+ATP Adenosine triphosphate 
+CTSI-SECIM Clinical and Translational Science Institute Southeast Center for Integrated 
+Metabolomics 
+DASH Dietary Approaches to Stop Hypertension 
+DNA Deoxyribonucleic acid 
+DQES Data Quality Evaluation System 
+DS Dietary supplement 
+DSLD Dietary Supplement Label Database 
+FDC FoodData Central 
+FF Foundation Foods 
+GTP Guanosine-5'-triphosphate 
+HILIC-HRMS/MS Hydrophilic Interaction Liquid Chromatography coupled with Tandem High 
+Resolution-Mass Spectrometry 
+LOD Limit of detection 
+MAFCL Methods and Application of Food Composition Laboratory 
+NFNAP National Food and Nutrient Analysis Program 
+NHANES National Health and Nutrition Examination Survey 
+NIH-ODS National Institutes of Health Office of Dietary Supplements 
+QC Quality control 
+RNA Ribonucleic acid 
+SEM Standard error of the mean 
+SU Serum urate 
+TTU Texas Tech University 
+UF University of Florida 
+USDA United States Department of Agriculture 
+WWEIA What We Eat in America 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 
+ 
+Purine Content of Foods (Release 2.0) Table of Contents 
+A. Introduction: Purines in Health and Disease ................................................................................... 5 
+Metabolism and Physiological Function of Purines in Humans ...................................................... 5 
+Hyperuricemia and Gout .................................................................................................................. 7 
+B. Impact of Diet on Urate Levels .......................................................................................................... 8 
+Dietary Factors and Urate Levels..................................................................................................... 8 
+Eating Patterns and Urate Levels ..................................................................................................... 9 
+C. The Need for Purine Data ................................................................................................................ 10 
+Estimating Total Intake of Various Purines is Challenging ........................................................... 10 
+Data are Lacking for Purines in Foods and Dietary Supplements ................................................. 10 
+D. Creation of the USDA Purine Database.......................................................................................... 11 
+Purpose ........................................................................................................................................... 11 
+Database Format and Reporting Protocols ..................................................................................... 12 
+Literature Purine Data .................................................................................................................... 12 
+1. Data Sources .............................................................................................................................. 12 
+2. Analytical Laboratory Methodology ......................................................................................... 13 
+3. Data Evaluation Methods .......................................................................................................... 13 
+4. Literature Data Discussion ........................................................................................................ 13 
+USDA Analytical Purine Data ....................................................................................................... 14 
+1. USDA Samples: Sources and Sampling .................................................................................... 14 
+2. Analytical Laboratory Methodology and Quality Control ........................................................ 18 
+3. Data Discussion ......................................................................................................................... 19 
+E. Database Strengths and Limitations ............................................................................................... 22 
+F. Summary: Plans for Foods and Dietary Supplements in Future Data Releases ......................... 22 
+G. References .......................................................................................................................................... 23 
+ 
+ 
+ 
+ 
+5 
+ 
+A. Introduction: Purines in Health and Disease  
+Metabolism and Physiological Function of Purines in Humans  
+Purines are a class of nitrogenous compounds essential to all living organisms. Chemically, purines are 
+heterocyclic aromatic organic compounds featuring a pyrimidine ring fused to an imidazole ring. 
+Adenine, guanine, hypoxanthine, and xanthine are the primary purine bases in plants and animals (Figure 
+1). In foods, purines exist as free bases, nucleosides, nucleotides, and nucleic acids in RNA and DNA, 
+with nucleic acids being the predominant form (Inazawa et al., 2014).  
+ 
+ 
+Figure 1. Chemical structures of four major purines 
+In the human body, purines are synthesized through the de novo synthetic pathway from the degradation 
+of nucleic acids in live and dying cells. They are also obtained exogenously by consuming foods, 
+beverages, and dietary supplements (DS) (Nelson & Voruganti, 2021; Ridi & Tallima, 2017). After 
+ingestion, free purines are efficiently absorbed, mainly in the duodenum and jejunum of the small 
+intestine. The metabolic pathways of purines in humans are summarized in Figure 2. Purines, related 
+chemically to each other and absorbed from the diet, are metabolized differently (Figure 2) (Clifford et 
+al., 1976; Brulé et al., 1992) and can be utilized through salvage pathways or can be catabolized into uric 
+acid. In humans, uric acid is the final product of both endogenous and exogenous purine metabolism, with 
+approximately 70% excreted by the kidneys and 30% through the intestines.  
+
+6 
+ 
+ 
+Figure 2. Metabolic pathways of purines and urate production in the human body (Abbreviations: ADP, 
+adenosine diphosphate; AMP, adenosine monophosphate; ATP, adenosine triphosphate; GDP, guanosine 
+diphosphate; GMP, guanosine monophosphate ; GTP, g uanosine triphosphate ; PRPP, p hosphoribosyl 
+pyrophosphate; IMP, inosine monophosphate ; XMP, x anthosine monophosphate ; NDK, nucleoside 
+diphosphate kinase; NMK, nucleoside monophosphate kinase;  5’NT, 5’nucleotidase; APRT, adenine 
+phosphoribosyl transferase; HPRT, hypoxanthine -guanine phosphoribosyl transferase; PNP, purine 
+nucleotide phosphorylase; XOR, xanthine oxidoreductase) 
+Purines have many important biochemical functions including acting as metabolic signals within and 
+between cells, providing energy, and regulating enzymatic activity (Nelson & Voruganti, 2021). Two 
+purines, adenine and guanine, form nucleotides (such as ATP and GTP) which are components of the 
+nucleic acids DNA and RNA (Kaneko et al., 2020; Nelson & Voruganti, 2021). Purine nucleosides such 
+as adenosine and inosine in the body are key molecules controlling intracellular energy homoeostasis and 
+nucleotide synthesis (Kaneko et al., 2020). Besides acting as chemical messengers, these purines act as 
+endogenous ligands that bind to and activate plasmalemmal purinoceptors, which mediate extracellular 
+communication that is sometimes referred to as “purinergic signaling” (Huang et al., 2021). Some purines 
+serve specialized roles in the nervous system like guanosine and adenosine, which exert trophic effects 
+following trauma (Rathbone et al., 1999; Jinnah et al., 2013). In addition, uric acid, the end metabolite of 
+purines, is not simply a waste metabolic product, but also serves as an antioxidant for tissue repair, 
+mediator of immune response, and in mitigating against neurological and autoimmune diseases (Nelson & 
+Voruganti, 2021; Ridi & Tallima, 2017).  
+
+7 
+ 
+Hyperuricemia and Gout 
+Elevated serum urate (SU) levels (> 7 mg/dL in men and > 6 mg/dL in women) indicate the condition 
+known as hyperuricemia. Hyperuricemia is a common disorder that affects patients of all ages and 
+genders. Hyperuricemia prevalence rates in the United States are 20.2% in adult men and 20.0% in adult 
+women, according to the National Health and Nutrition Examination Survey (NHANES) 2015-2016 
+(Chen-Xu et al., 2019). Hyperuricemia is caused by many factors, including lowered urate excretion 
+and/or increased urate production through endogenous purine metabolism and/or dietary purine intake 
+(Chittoor & Voruganti, 2020). Although hyperuricemic individuals are often asymptomatic and untreated, 
+a causal relationship between hyperuricemia and the pathogenesis of a variety of other health problems 
+has been proposed (Chittoor & Voruganti, 2020). It is associated with a higher risk of gout, hypertension, 
+cardiovascular disease, and kidney disease (Chittoor & Voruganti, 2020).  
+Gout,  a painful  form of inflammatory arthritis caused by deposits of monosodium urate crystals in joints, 
+occurs in about 25% of individuals with hyperuricemia. The presence of hyperuricemia and gout are 
+worldwide health issues (Juraschek et al., 2021; Luk & Simkin, 2005). The gout disease burden grew 
+globally from 1990 to 2017 due in concert with dietary and lifestyle changes, aging populations, and a 
+rise in elevated body mass index. Gout is generally highest in developed regions and countries such as 
+New Zealand, Australia, and the United States (Safiri et al., 2020; Xia et al., 2020). In recent years, Japan 
+has experienced an annual increase in hyperuricemia and gout, possibly due to shifting dietary patterns; 
+hyperuricemia prevalence affected 20-25% of Japanese adult males in 2010 while gout prevalence 
+exceeded 1% in males aged 30 years and older (Hisatome et al., 2020). Recent modeling suggests the 
+global burden of prevalent gout is expected to increase by more than 70% from 2020 to 2050 largely due 
+to population growth and ageing (GBD 2021 Gout Collaborators, 2024). According to NHANES 2015-
+2016, nearly 4% of U.S. adults (9.2 million people) have gout, including 5.2% of men and 2.7% of 
+women (Chen-Xu et al., 2019). The lower incidence of gout in women may be related to endocrine 
+differences, where estrogen may inhibit the onset of arthritis and promote urate excretion (Hak et al., 
+2010; Luk & Simkin, 2005). Epidemiologic studies have linked dietary factors with gout risk (Chittoor & 
+Voruganti, 2020; Nuki & Simkin 2006; Zhang et al., 2012). Traditionally, the causes of gout were 
+attributed to an affluent or “western” lifestyle, including red meats, seafoods, and alcohol. Additional 
+causes include obesity, ethnicity, biological sex, and genetics (Kuo et al., 2015; MacFarlane & Kim, 
+2014; Todd & Wright, 2020). 
+Accumulated evidence suggests that elevated SU levels may lead to a higher risk of cardiovascular 
+disease, hypertension, dyslipidemia, obesity, metabolic syndrome, type 2 diabetes, and chronic renal 
+disease (Vareldzis, Perez, & Reisin, 2024.). For example, it was observed that individuals with gout who 
+also experienced a cardiovascular event were more likely to have had a recent gout flare than gout 
+patients who did not have a cardiovascular event, suggesting that hyperuricemia and cardiovascular issues 
+are closely related and that episodes of gout are linked to increased risk for cardiovascular events 
+(Cipolletta et al., 2022). In addition, other potential underlying mechanisms may include regulating 
+molecular signals, such as inflammatory response, oxidative stress, insulin resistance, endoplasmic 
+reticulum stress, and endothelial dysfunction (Yanai et al., 2021). 
+Conventional treatment options for hyperuricemia as well as gout include exercise, weight loss if 
+warranted, restriction of alcoholic and sugary beverages containing fructose, anti-inflammatory agents, 
+and urate-lowering medications, as well as avoiding excessive meat and seafood intake (see section B 
+8 
+ 
+“Impact of Diet on Urate Levels”) (Mallen et al., 2017; Richette & Bardin, 2017). Dietary modification is 
+considered a primary preventive strategy to avoid gout flares (Nuki & Simkin, 2006; Chittoor & 
+Voruganti, 2020; Todd & Wright, 2020). 
+B. Impact of Diet on Urate Levels 
+Dietary Factors and Urate Levels  
+Diet plays an integral role in hyperuricemia and gout via the contribution of dietary purines, leading to 
+increased urate production as shown in observational and intervention studies. The traditional dietary 
+approach to lowering urate levels is reducing the intake of high purine foods such as alcohol, meats, 
+seafood, and some vegetables (MacFarlane & Kim, 2014; Nuki & Simkin, 2006; Rai et al., 2017). 
+Frequent and high consumption of these foods and beverages are associated with elevated SU levels 
+(Kaneko et al., 2014; Li et al., 2018; Villegas et al., 2012; Zgaga et al., 2012). A higher risk of 
+hyperuricemia was observed with higher intake of red meat, poultry, seafood, and legumes in a large 
+cross-sectional study of Chinese adults independent of sex, age, geographic region, body mass index, 
+hypertension, consumption of refined grains, and alcohol intake (Aihemaitijiang et al., 2020). However, 
+different cuts of meat and different types of seafood vary substantially in their total purine content, 
+highlighting the importance of having purine data for specific foods to inform appropriate dietary choices 
+instead of avoiding all meats and all seafood. 
+High purine vegetables are not associated with the risk of hyperuricemia or gout (Choi et al., 2004; Li et 
+al., 2018; Villegas et al., 2012; Zgaga et al., 2012, Jakse et al., 2019). However, data on the purine content 
+of various types of vegetables, such as different Brassicas (e.g., broccoli and cauliflower), are inconsistent 
+and may lead to undue dietary restrictions. The data discussion section of this document, below, presents 
+examples of this finding. Since various mechanisms affect hyperuricemia, restricting all purine-rich foods 
+would unnecessarily eliminate certain foods that confer other health benefits. Therefore, these studies 
+highlight the need for an accurate understanding of which food products, including DS, are high in purine 
+content and increase the risk of hyperuricemia and gout. 
+Dietary factors besides total purine intake can impact urate levels, such as levels of specific uricogenic 
+purine bases in foods. Uricogenic bases are purine bases that increase serum and urinary urate 
+concentrations (Sarwar & Brulé, 1991). Hypoxanthine has shown the greatest dietary impact on 
+increasing gout risk due to its effect on urate levels in the body (Clifford et al., 1976). Adenine also seems 
+to increase urate levels (Clifford et al., 1976; Sarwar & Brulé, 1991; Brulé et al., 1992). The ratio of the 
+four major purine bases (adenine, guanine, hypoxanthine, and xanthine) relative to total purines in a food 
+seems influential in affecting SU, especially the impact of hypoxanthine (Kaneko et al., 2014). 
+Consuming dairy foods can decrease the risk of gout and hyperuricemia due to inverse associations with 
+serum urate (Choi et al., 2004; Li et al., 2018; Zgaga et al., 2012). In one large observational study, low-
+fat dairy products were inversely associated with the incidence of gout (Choi et al., 2004). The protective 
+effects of dairy have been attributed to the milk proteins casein and lactalbumin (Choi et al., 2005) and to 
+the dairy fractions glycomacropeptide and G600 milk fat extract (Dalbeth et al., 2012). Soy food intake is 
+also negatively associated with the risk of hyperuricemia and gout (Villegas et al., 2012; Li et al., 2018). 
+High levels of meat and seafood consumption in the diet, but not total protein intake, have been linked to 
+higher serum urate levels, while dairy intake has been inversely associated with serum urate levels (Choi 
+et al., 2005). 
+9 
+ 
+Sugar-sweetened beverages are not sources of purines but should be avoided by those wishing to control 
+urate levels because uric acid is produced by the breakdown of ATP through the metabolism of fructose 
+(Luk & Simkin, 2005; Nelson & Voruganti, 2021). Sugar-sweetened beverages also appear to compete 
+with urate excretion (Maiuolo et al., 2016; Chittoor & Voruganti, 2020).  
+Alcohol consumption has multiple mechanisms which raise SU (Pillinger & Keenan, 2008). The purine 
+content of alcoholic beverages is only one of several factors involved in inducing changes to SU. Other 
+factors include increased urate production and increased reabsorption of urate by the kidneys (Todd & 
+Wright, 2020). Gout patients are typically advised to limit alcohol to one drink per day for women or two 
+drinks per day for men (Khanna et al., 2012). 
+High doses of vitamin C (i.e., 400-500 mg/day) have beneficial effects on uric acid levels such as 
+increased urinary urate excretion (Azzeh et al., 2017; Berger et al., 1977; Stein et al., 1976) and reduced 
+SU concentration (Huang et al., 2005; Juraschek et al., 2011). In addition, vitamin C is highly associated 
+with a reduced risk of gout (Choi et al., 2009). Vitamin C supplementation at 500 mg/day reduced SU and 
+modestly reduced the incidence of new or recurrent gout diagnoses in middle-aged male physicians 
+(Juraschek et al., 2022). 
+Weight loss is often recommended to gout patients since a lower body mass index has been associated 
+with a lower risk of gout (Choi et al., 2005). However, reducing subjects’ body mass indices led to either 
+higher urate levels or no effects in a recent randomized clinical trial, and so additional studies are needed 
+(Hu et al., 2021). 
+The effects of diet on urate levels differ by race, sex, body weight, and by the presence of certain genetic 
+polymorphisms. For example, legume intake increased serum urate among African Americans compared 
+to White adults, while alcohol intake increased serum urate to the same extent among African Americans 
+and White adults in the United States (Beydoun et al., 2018). Dairy intake had an inverse effect on serum 
+urate among African Americans but not White women (Beydoun et al., 2018). Recently, a cross-sectional 
+analysis using NHANES 2011-2018 found that gout prevalence was twice as common among Asian 
+adults in the United States than in any other race/ethnic groups (Yokose et al., 2023). In addition to diet, 
+the higher prevalence of gout in Asian populations may be influenced by genetic polymorphisms (Butler 
+et al., 2021). 
+Eating Patterns and Urate Levels 
+The Dietary Approaches to Stop Hypertension (DASH) diet, which focuses on fruit, vegetables, and low-
+fat dairy products, is being studied as a dietary intervention pattern for gout. Since nutrients and foods are 
+consumed as part of a total diet, research on the effect of various eating patterns has presented an 
+opportunity to examine the combinations of foods and micronutrients on hyperuricemia and gout risk (Rai 
+et al., 2017).  
+The DASH diet is associated with lower gout risk among men (Rai et al., 2017) and lowered SU 
+(Juraschek et al., 2016; Rai et al., 2017; Belanger et al., 2021). In a recent study, gout patients were 
+instructed to follow the DASH diet along with other guidelines such as avoiding red meat, organ meat, 
+shellfish, and excess alcohol consumption (Juraschek et al., 2021), presumably because those foods and 
+beverages are traditionally considered high dietary sources of purines. In these and other scenarios, data 
+10 
+ 
+for the purine content of specific foods can be beneficial for making food choices and optimizing 
+established healthy dietary patterns for adults at risk for gout. 
+C. The Need for Purine Data 
+Estimating Total Intake of Various Purines is Challenging 
+There have been few, if any, well-controlled trials documenting the relationship between the consumption 
+of dietary purines and serum urate in healthy individuals or in those with hyperuricemia or diagnosed 
+gout. One of the major hurdles in conducting such intervention studies and other types of clinical trials is 
+that the exact amounts of individual purines in most foods, and especially in cooked foods, are unknown 
+(Gibson et al., 1983; Choi et al., 2004). Additionally, the bioavailability of different purines varies 
+considerably in specific foods, so total purine content alone is insufficient - it is also important to know 
+what specific purines are present. For example, studies which supplemented subjects’ diets with RNA or 
+DNA showed that RNA influenced urate concentration more than an equivalent amount of DNA (Zollner 
+& Griebsch, 1974). Other dietary studies have found that oral doses of adenine and hypoxanthine 
+increased subjects’ SU levels while guanine and xanthine had no effect (Clifford et al., 1976). Overall, 
+very few intervention trials have been conducted in recent years to examine how individuals with 
+hyperuricemia respond to dietary changes.  
+We are not aware of research conducted to establish dietary guidance on intakes of various purines. While 
+recommended intake levels for purines have been established internationally, such as Japanese 
+recommendations limiting purine intake to 400 mg/day to prevent hyperuricemia and gout (Kaneko et al., 
+2020), current U.S. dietary guidance does not provide recommended intake levels of various or total 
+purines for healthy adults or patients with hyperuricemia. The American College of Rheumatology rated 
+the certainty of evidence as “low” between limiting purine intake and gout management in its recent 
+review (FitzGerald et al., 2020), but it has been noted that there was a dose-response relationship between 
+higher consumption of purines and risk for gout flares (acute episodes of joint pain and swelling) (Zhang 
+et al., 2012). These gaps suggest the need for more research to determine if diet-disease relationships do 
+exist, as well as the need for research and clinical resources such as databases that will improve 
+estimation of total and individual purine intake.  
+Data are Lacking for Purines in Foods and Dietary Supplements  
+There is very little high-quality information available on the purine content of commonly consumed U.S. 
+foods. Systematic searches for sources of purine food composition data for dietary guidance to assist 
+patients or clinicians reveal that data are rarely or poorly documented or are outdated. Websites focusing 
+on gout treatment often provide only limited total purine values and do not give data on which purine 
+bases are present in foods, nor do they cite their data sources. A table of purine values is provided in the 
+seminal food composition reference (Pennington & Spungen, 2012), although it is not in the public 
+domain, there is a fee for accessing these data, and the data are outdated and limited to that available over 
+a decade ago.  
+Some dietary guidance sources group foods into categories (low, medium, high, very high) using a 
+nominal scale or an ordinal scale (numbering 1 through 4) to guide patients on which foods are high in 
+purine content and should be restricted in frequency and amounts consumed. Such categorizations should 
+be based on consistent sampling and assay methodology and should be relevant to the food supply of the 
+11 
+ 
+patient’s country of residence if they are to provide actionable and effective guidance. Many other 
+patient-facing materials on health websites (e.g., Cleveland Clinic or WebMD) and patient advocacy 
+groups (e.g., the Arthritis Foundation) provide similar recommendations for restricting purines, but they 
+often focus on rarely or uncommonly consumed foods (e.g., game and organ meats) and neglect 
+commonly consumed foods in the U.S.  
+Also, no North American-based studies have published analytical data on the purine content of commonly 
+sold DS available for U.S. consumers. However, concentrated amounts of purines have been found in 
+some Japanese DS (Kaneko et al., 2014), suggesting that DS potentially could represent a substantial 
+source of purines intake. Some DS on the U.S. market, such as products promoted for increasing energy 
+or losing weight, are labeled as containing purine nucleotides or related compounds (e.g., adenosine, 
+ATP, GTP) or purine-rich constituents (e.g., yeast extracts). Many other DS may have purines as an 
+undisclosed significant component but are not required by law to specifically list purines in the 
+Supplements Facts panels. These products could pose a health risk to people who must limit their purine 
+intake and are unaware that the products contain purines.  
+The absence of a centralized and consistently structured database is problematic for at-risk groups such as 
+patients already suffering from hyperuricemia and gout because it has led to poorly documented guidance 
+and the proliferation and use of anecdotal home remedies. Data for the purine content of foods and DS are 
+limited and needed to strengthen the science base between purine intakes in health and disease outcome, 
+as well as to address other gaps in knowledge of their physiological relevance (Choi et al., 2004). 
+D. Creation of the USDA Purine Database  
+Purpose 
+The “USDA and ODS-NIH Database for the Purine Content of Foods” is designed to function as an 
+essential source of publicly available dietary purine data for researchers, health professionals, and others 
+striving to monitor purine consumption (USDA & NIH ODS, 2021). The purine database was developed 
+as a collaborative effort among scientists at USDA’s Methods and Application of Food Composition 
+Laboratory (MAFCL) in Beltsville, MD, the Office of Dietary Supplements National Institutes of Health 
+(ODS-NIH) in Bethesda, MD, the University of Florida Clinical and Translational Science Institute 
+Southeast Center for Integrated Metabolomics (UF CTSI-SECIM) in Gainesville, FL, the Beth Israel 
+Deaconess Medical Center in Boston, MA, and the Department of Animal and Food Sciences at Texas 
+Tech University in Lubbock, TX.  
+The first USDA and ODS-NIH purine database release (Release 1.0) was published on the USDA 
+MAFCL website in February 2023. Release 1.0 of the database provided existing data for purine bases in 
+foods (396 foods and 15 alcoholic beverages) sourced from mostly non-U.S. validated literature with a 
+usable format. 
+Release 2.0 of the database contains new analytical data for 61 foods and 14 purine-containing DS from 
+samples collected from the U.S. market, as well as all validated literature data that was published in 
+Release 1.0 to allow for comparisons among foods. The goals of this study were as follows: a) to generate 
+new analytical data for the purine database for commonly consumed U.S. foods using validated 
+methodology based on nationally representative intake patterns, b) to ascertain the purine content of the 
+top consumed meat products sold in the U.S., c) to observe possible changes in the content or base form 
+12 
+ 
+of purines and uric acid after cooking, and d) to determine the analytical content of purine-containing DS 
+from a subset of commonly consumed supplement products. Foods and DS selected for analysis were 
+based on comprehensive and representative sampling plans detailed below which were designed to 
+address data gaps observed after the publication of Release 1.0.  
+Database Format and Reporting Protocols 
+The Purine Database Release 2.0 is presented as an Excel data file, which contains a total of 6 tabs. Tabs 
+are separated into North American food data (United States and Canada), international food data, alcohol 
+data, DS per serving unit (per individual unit such as one tablet, one capsule or a specific weight), DS per 
+serving (e.g., a recommended intake such as two tablets or three capsules), and literature-derived purine 
+content. Data were grouped into typical U.S. food categories for presentation in the database (e.g., beef 
+organ meats, legumes, vegetables). USDA’s analytical data are presented in bolded text along with the 
+values from other literature that was reviewed to enable interpretation and for planning future work. 
+Sample size (n), the four major purine bases (adenine, guanine, hypoxanthine, xanthine), and their total 
+sum are all reported. Uric acid was added in this release due to measurable amounts found in some foods. 
+Footnotes are given where further descriptions or explanations of specific foods are needed. 
+Means, standard error of the mean (SEM), minimum (Min), and maximum (Max) values were reported as 
+milligrams per 100 grams for foods and in milligrams per 100 milliliters for alcohol. When applicable, 
+other reporting units from literature were converted into these units for consistency in observing data 
+across studies. Food data is recorded on a fresh weight basis and cooked basis for some foods. Data cells 
+with a dash (“- “) indicate data that was not calculable or measured, whereas values listed as “ND” (not 
+detected) in literature were reported when purine measurements were below the studies limit of detection.  
+Dietary supplements are presented as 5 categories (brewer’s yeast, chlorella, spirulina, RNA/DNA 
+(nucleotide complex), and royal jelly), and are grouped under their respective dosage forms (capsule, 
+tablet, powder) to best represent the purine content associated with ingestion of each form. DS were 
+reported as milligrams per serving unit and as milligrams per serving in accordance with their respective 
+Supplements Facts panels. 
+Literature Purine Data 
+1. Data Sources 
+For Release 1.0 published February 2023, published data for four purine bases (adenine, guanine, 
+hypoxanthine, and xanthine) in foods and alcoholic beverages were compiled. Food listings from 
+literature were reported in fourteen studies conducted in various countries. Data came primarily from 
+Japan; less than 20% of the food items in the database were from North American sources (United States 
+and Canada).  
+Data from the scientific literature were re-examined in 2024 to obtain an accurate number of foods and to 
+determine which studies, if any, measured uric acid in food; only one of the fourteen studies contained 
+this information. Six foods from Kaneko et al. (2014) were separated into two different food descriptions 
+based on an incorrect grouping of data. The food descriptions modified in Release 2.0 were: 
+• Beef brisket (split into beef brisket and beef shin) 
+• Red king crab (split into red king crab and snow crab) 
+13 
+ 
+• Bean sprouts (split into “with” and “without bean” descriptors) 
+• Mustard spinach (komatsuna) (split into “baby” and “mature” varieties) 
+• Spinach (split into “baby” and “mature” varieties) 
+• Removal of the food longcod (split into arabesque greenling and fat greenling) 
+Footnotes were also added to three foods from Kaneko et al. (2014) (white rice, asparagus, and bamboo 
+shoots) to indicate when USDA combined data for the same food due to similar purine measurements and 
+processing conditions. 
+Tab 1 displays 75 foods from North American sources to facilitate inspection of data for foods analyzed 
+domestically. Tab 2 reports 327 foods from other countries to provide a broadened perspective of 
+available published data. Tab 3 includes 13 alcoholic beverages from Japan, Austria, Hungary, Romania, 
+and Poland. Food data from countries beyond North America can be applicable in the U.S. due to 
+availability in Asian or other specialty markets. However, differences among plant species, growing 
+conditions, storage, laboratory methods, and other factors can impact reported purine values and should 
+be considered when referencing data from various sources.  
+The studies were published between 1976 and 2020, with nearly half of them occurring prior to 1989. 
+Other studies were found but were not included because they reported total purine values but not values 
+for individual bases or disseminated their data only in the German or Japanese languages. 
+2. Analytical Laboratory Methodology 
+Analytical laboratory methods for measuring purine content in the foods and beverages in the database 
+are listed with their respective data sources in Tab 6. High performance liquid chromatography (HPLC), 
+which has been proven to be effective for many years in measuring purine content of foods, was used in 
+all the published studies except for one, which used capillary zone electrophoresis for analysis of beers. 
+3. Data Evaluation Methods 
+The purine literature data were evaluated for quality using procedures developed by scientists at USDA’s 
+MAFCL, (formerly the Nutrient Data Laboratory) (Bhagwat et al., 2009). The scientists used a modified 
+version of the USDA Data Quality Evaluation System (DQES) to assign a numeric score to each data 
+source (Holden et al., 2002, 2005). Five categories of documentation were initially evaluated: sampling 
+plan, sample handling, number of samples, analytical method, and analytical quality control. However, 
+scoring of the analytical method could not be accomplished due to lack of standardized evaluation 
+criteria. Notable characteristics of the studies reporting data used in this purine database (except for 
+additional data published in 2020) were reported in Wu et al., 2019. 
+4. Literature Data Discussion  
+As observed in Tabs 1 and 2, purine content varied among foods, and it also varied for the same food in 
+different studies. For example, total purine in raw beef cuts in the database ranged from 77 to 123  
+mg/100 g (chuck ribs and round, respectively), while liver had up to 220 mg/100 g. Among canned 
+seafood items in the database, clams had 62 mg/100 g, while anchovies had 321 mg/100 g. Furthermore, 
+the overall category of finfish and shellfish ranged from 7.7 to 1,400 mg total purines/100 g. 
+14 
+ 
+Dark and traditional-type beers had higher adenine and hypoxanthine values than other types of beers and 
+other alcoholic beverages reported, although the highest total purine value among alcoholic beverages 
+was only 13.5 mg/100 g (or about 46 mg/12 ounce serving) (Tab 3). 
+Uric acid was evaluated in vegetarian dishes, soy protein concentrate, and poultry (Tab 2). Negligible uric 
+acid was observed in most of the vegetarian dishes and the soy protein concentrate. Raw chicken liver 
+contained 51 mg uric acid/100 g; this value corroborates prior scientific consensus that purine metabolism 
+occurs in the liver prior to excretion via the intestines and renal system.  
+Variations in purine content may be due to natural differences in foods (such as vegetable cultivars or 
+animal breeds), different sampling plans, sample handling, cooking, laboratory methods, and other 
+factors. Overall, purine values are generally highest in animal-based products (especially organ meats) 
+and lowest in dairy, eggs, grains, fruits, and most vegetables. Moreover, in most cases products from 
+animal sources (other than dairy and eggs) contain higher amounts of the uricogenic bases hypoxanthine 
+and adenine than other food groups. The food category with the highest mean hypoxanthine values was 
+the “soups and sauces” group which was mostly influenced by the dehydration process and reporting of 
+certain sauces as mixes, not as consumed. Thus, the user of the data would need to account for the 
+dilution factor of water to correct to “as consumed.” Mean hypoxanthine levels were lowest in plant-
+based foods, dairy, eggs, and sweets. Mean values for adenine were highest in organ meat products 
+(chicken and beef liver, pork kidney), dried yeast, and cod milt (i.e., the cod’s sperm filled gland) and 
+were lowest in dairy and eggs, fruits, and sweets.  
+USDA Analytical Purine Data 
+1. USDA Samples: Sources and Sampling 
+Food Samples 
+USDA food samples came from several sources and included both archived and recently acquired 
+material. Recently procured samples were preferred whenever possible to provide data that best 
+represented the current U.S. food supply. Therefore, most USDA samples for purine analysis were 
+acquired in conjunction with the FoodData Central (FDC) Foundation Foods (FF) program, a new food 
+composition database designed to provide expanded metadata on a diverse number of raw foods and 
+ingredients (USDA ARS, 2024a). Foods from this program are primarily convenience-sampled with the 
+goal of collecting a diverse and representative number of samples from manufacturers and distributors. 
+Foods were obtained at large grocery stores throughout Maryland and Virginia from January 2023-2024. 
+All samples were processed by the food composition laboratory at Virginia Tech in Blacksburg, VA.  
+A few of the foods selected to address data gaps were from the National Food and Nutrient Analysis 
+Program (NFNAP) (Haytowitz and Pehrsson, 2018). Among these were cooked chickpeas, canned tuna, 
+and 2% milk (collected in July 2010, January 2017, and April 2018, respectively). 
+To determine the purine content of animal-based products and the effects of cooking, 13 types of meat 
+were selected based on 2017-2018 consumption data published in 2020 from the What We Eat in America 
+(WWEIA) database, the dietary intake interview portion of the national food survey NHANES (USDA 
+ARS, 2024b). Meat samples were purchased with unique lot numbers from different manufacturers in 
+Lubbock, TX supermarkets in June through October 2023 through collaboration with Texas Tech 
+15 
+ 
+University (TTU). Meats were stored in a food-grade refrigerator (4 °C) after purchase. Meats were 
+chopped into pieces, placed in a strainer, and were submerged into liquid nitrogen until solidly frozen. 
+Samples were subsequently homogenized with a blender, placed in double-sealed plastic bags (Ziploc 
+brand), and were frozen at -20 °C or colder until ready to aliquot. All samples were processed prior to 
+expiration dates listed on the packages. The meat samples were cooked at TTU based on a raw-to-cooked 
+paired meat sampling plan (Table 2). Subsamples of raw or unprepared (for processed foods) material 
+were collected from each meat cut before cooking to allow for a direct comparison of purine content. 
+Processed meats were prepared for analysis according to label directions (e.g., boiling). Raw meats were 
+cooked without added ingredients such as oils, spices, and/or butter. Conventional recipes that most 
+closely emulated American consumers’ cooking methods for each meat were used. 
+Samples for purine analysis were shipped to the University of Florida Clinical and Translational Science 
+Institute Southeast Center for Integrated Metabolomics (UF CTSI-SECIM) in Gainesville, FL. Typically 
+at least 6 to 8 individual samples per food to were obtained to provide a representative sample size (n) for 
+statistical analysis. However, for some foods, a smaller (n) was deemed adequate due to their low 
+observed variability, material limitations, or the exclusion of outlier data. Blind duplicates and replicates 
+were included for most foods. 
+In some cases, literature data was used to identify foods critical in U.S. diets warranting additional 
+analysis due to low (n) or lower than expected purine content. For example, only one data point was 
+observed in literature for chicken eggs, which reportedly did not contain purines (Kaneko et al., 2014). 
+Therefore, a total of 6 raw chicken eggs were convenience sampled from supermarkets (n = 3) and a local 
+farm (n = 3) in Alachua, FL, in September 2024. Each set of eggs were boiled in liquid chromatography 
+(LC) grade water for approximately 8-10 minutes until fully cooked. Samples were subsequently peeled, 
+and the egg whites and yolks were separated. The egg whites were chopped finely with a knife, while the 
+yolks were crushed with a fork. 
+Dietary Supplement (DS) Samples 
+A sampling plan was developed by USDA to identify and procure DS with the overall goal of obtaining 
+analytical purine content from a subset of commonly consumed supplements. The sampling plan was 
+based on a thorough evaluation of published literature, U.S. market data from online web searches using 
+the ODS Dietary Supplement Label Database (DSLD) and retail vendors, analytical data from Kaneko et 
+al. (2014), and an intake analysis on a representative sample in the U.S. population using the US National 
+Health and Nutrition Examination Survey (NHANES) data spanning 2017-2020. Five DS categories 
+containing “very high” levels of purines (>300 mg/100 g) were chosen: brewer’s yeast, chlorella, royal 
+jelly, RNA/DNA (nucleotide complex), and spirulina. Searches of NHANES DS data files with these key 
+terms led to the identification of 38 potentially high-purine products available in the U.S. market.  
+A USDA in-house, ranked scoring system was used to prioritize the most popular DS available for 
+purchase by U.S. consumers (Table 1). A score of “2” was given to products found in NHANES due to 
+their use by American consumers, and “1” to products found in DSLD and online retail websites 
+including Amazon, Walmart, and others. A variety of online retail platforms were researched /surveyed to 
+ensure that a diverse range of purine-rich DS were represented. Ultimately, 14 representative DS samples 
+characterized by 3 dosage forms (tablet, capsule, and powder) were selected for inclusion in the Purine 
+Database Release 2.0.  
+16 
+ 
+Supplements were procured by USDA and UF CTSI-SECIM from online retailers including Amazon, 
+iHerb, and manufacturer websites. For each sample, at least 200 pills of the same lot with an expiration 
+date of at least one year were purchased. 
+17 
+ 
+Table 1. List of dietary supplements (DS) identified for purine analysis using USDA’s US market-based sampling plan. 
+Product Name (dose) Dosage 
+Form 
+Brand 
+Code NHANES DSLD 
+Online Retail Vendor 
+USDA 
+score 
+Amazon iHerb Walmart Pureformulas Vitamin 
+Shoppe Other 
+Brewer’s Yeast, 650 mg Tablet A 0 1 1 1 1 1 0 0 5 
+Brewer’s Yeast, 500 mg Tablet B 0 1 1 1 1 0 0 0 4 
+Brewer’s Yeast, 500 mg Tablet C 0 1 1 1 1 0 0 0 4 
+Brewer's Yeast, 1000 
+mg Capsule J 0 0 1 0 1 0 0 1 3 
+Chlorella, 200 mg Tablet D 2 1 1 1 1 1 1 0 8 
+Chlorella, 1000 mg Tablet A 0 1 1 1 1 1 0 0 5 
+RNA/DNA  
+(nucleotide complex) Capsule F 0 1 1 1 1 1 0 0 5 
+Royal Jelly, 1500 mg Capsule A 0 1 1 1 1 1 0 0 5 
+Ginseng & Royal Jelly Capsule A 0 1 0 1 1 1 0 0 4 
+Spirulina, Blend Powder E 2 1 0 0 0 0 0 1 4 
+Spirulina, 1000 mg Tablet G 2 1 1 1 1 1 1 1 9 
+Spirulina, 500 mg Tablet H 2 1 1 1 1 0 0 0 6 
+Spirulina, 500 mg Tablet I 0 1 1 1 1 0 0 0 4 
+Spirulina, 500 mg Tablet A 2 1 1 1 1 1 0 0 7 
+A score of “1” was given to products found in DSLD and online retail websites including Amazon, Walmart, and others, and a score of “2” was given to products 
+found in NHANES due to their use by American consumers.
+18 
+ 
+2. Analytical Laboratory Methodology and Quality Control 
+Sample Preparation and Extraction 
+All food samples except for chicken eggs (as described above) were homogenized prior to shipment at UF 
+CTSI-SECIM. Upon arrival, samples were transferred into a freezer and stored in -80 °C until analysis. 
+Unprocessed dietary supplements were stored at room temperature.  
+The United States Pharmacopoeia (USP) has developed analytical reference standards in the form of 
+monographs and general chapters for dietary and herbal supplements. However, monographs for the 5 
+categories of purine-containing DS do not exist. Therefore, for the preparation of supplements, a total of 
+20 pills (30 if pills were ≤ 20 mm) per DS were homogenized following USP general guidance (U.S. 
+Pharmacopoeia (USP), <2040>). Tablets and capsules (along with the shell) were homogenized using a 
+coffee grinder. The jars were cleaned out between grinding with deionized water and methanol. The fine, 
+powdered sample was processed as-is without further homogenization. Resulting material was prepared in 
+duplicate, and remaining material was stored at -80 °C for retesting as needed. Additionally, brewer’s 
+yeast tablets from the same batch of material were prepared and analyzed individually a total of 6 times 
+for reproducibility. 
+Purines were extracted using acid hydrolysis according to previously published methodology with minor 
+modification (Kaneko et al., 2014). 1.0 g of material was transferred to a 16-mL glass tube. Ten mL of 
+liquid chromatography–mass spectrometry (LC-MS) grade water was added to each sample along with 
+0.5 mL of 2,6-diaminopurine as an internal standard. Samples were sonicated using a high-powered 
+sonicator (Model #FS-220, Fisher Scientific, Waltham, MA) for 15 minutes.  
+Acid hydrolysis was performed by adding 3 mL of 70% perchloric acid (HC lO4) solution with heating in 
+a water bath for 60 minutes at 95 °C. The samples were then neutralized by adding 3.5 mL of ammonium 
+hydroxide (NH4OH) to pH 8.0. Samples were filtered through a Grade 1 Whatman qualitative filter paper 
+(70 mm diameter) (Cytiva, Wilmington, DE). An aliquot of the filtrate was transferred to a clean tube 
+along with 20 µL of purine internal standards and 200 µL of precipitation solution (45:5 
+acetonitrile:acetone with 0.01% ammonium hydroxide). Samples were centrifuged at 20,000 x g for 10 
+minutes at 4 °C before transferal to HPLC vials. 
+Qualitative and Quantitative Analysis 
+Purine content was determined using Hydrophilic Interaction Liquid Chromatography coupled with 
+Tandem mass spectrometry (HILIC-HRMS/MS). Samples were analyzed using a Thermo Scientific 
+Vanquish UHPLC system coupled to a Thermo-Scientific Q-Exactive orbitrap mass spectrometer 
+operated in negative electrospray ionization mode. Chromatographic separation was performed using a 
+HILIC-Z column (1.9 µm, 2.1 mm X 150 mm; Agilent, Santa Clara, CA). Mobile phase A was 15 mM 
+ammonium formate (NH4HCO2) in 1:9 water: acetonitrile (pH 9.9) and mobile phase B was 15 mM 
+ammonium formate in 9:1 water: acetonitrile (pH 9.9). The pH was adjusted with ammonium hydroxide. 
+Both mobile phases were spiked with 0.5% medronic acid (CH6O6P2). The injection volume was 3 µL 
+with a flow rate 0.4 mL/min.  
+A mixture of purine standards (xanthine, hypoxanthine, guanosine, guanine, adenine, inosine, AMP, IMP, 
+GMP and uric acid) was prepared at a concentration of 500 µM and a mixture of internal standards 
+(inosine-15N4, adenine-15N5, xanthine-13C,15N2, hypoxanthine-13C,15N2, guanosine-13C2,15N, and AMP-
+19 
+ 
+13C5; ≥ 95% purity) was prepared at a concentration of 10 µg/mL. This mixture of internal standard was 
+spiked into each calibration level and samples. A ratio of area under the curve for each analyte to the area 
+under the curve for the respective internal standard was plotted to calculate the amount of each analyte in 
+the sample. Using this stock mixture of standards, an external calibration curve ranging from 50 ng/mL to 
+25,000 ng/mL was prepared. For hypoxanthine, a separate external curve was prepared with concentration 
+range 250 ng/mL to 400 µg/mL. 
+Quality Control 
+Quality control (QC) samples were prepared from separate stock solutions of purine standards at three 
+levels: 750 ng/mL, 2500 ng/mL and 7500 ng/mL. Hypoxanthine QC levels were prepared at 750 ng/mL, 
+7500 ng/mL, 25000 ng/mL and 75000 ng/mL. QCs were acquired every 10 samples to check the 
+performance of the instrument and stability of the analytes throughout the batch. Blind duplicates and/or 
+replicate material were included in each batch of analyses to evaluate the repeatability and reproducibility 
+of the data. The limit of detection (LOD) for purines in food and DS samples was 50 ng/mL. Sample error 
+for all the analyses was maintained under 15% to account for the inherent variability of foodstuffs. 
+3. Data Discussion 
+Food Samples 
+USDA’s analytical laboratory data (Tab 1) shows the purine content of food varies depending on 
+category, food type, cultivar, cooking status, and more. Foods in the meats and seafood categories 
+contained more purines than foods in the dairy, legumes, and vegetables categories. Variation in purine 
+content was also observed within food categories. For example, the total amount of purines in pork 
+products ranged from 141 to 448 mg/100 g depending on the meat cut, processing state, and cooking 
+status. Similarly, the total quantity of purines in raw and processed seafood ranged from 110 to 260 
+mg/100 g depending on the fish and crustacean species. Notably, the purine content measured in most of 
+USDA’s meat samples were higher compared to literature values apart from the turkey values. In some 
+cases, foods which were higher or lower in purine content than expected compared to the rest of the foods 
+in a category were observed. These included green peas, which were higher in total purines (72 mg/100 
+g), and cooked chickpeas, which were lower in total purines (11 mg/100 g) compared to other legumes 
+which ranged from 21 to 35 mg/100 g. Less than 1.0 mg/100 g total purines were measured in chicken 
+egg whites and yolks, which is comparable to data in Kaneko et al. (2014). This analytical data is 
+consistent with dietary guidance classifying meat and seafood as purine-rich foods.  
+Care should be taken in interpreting differences between the raw and cooked meats. For all raw to cooked 
+paired meat products, total purine content on a milligram per 100-gram basis increased due to moisture 
+and fat losses from cooking (Table 2). For example, raw bacon appeared to contain over three times more 
+total purines than cooked bacon (141 vs. 448 mg/100 g). When moisture loss from cooking was 
+considered, negligible differences between the purine content of the two products were observed. 
+Processed meats (e.g., frankfurters), however, retained their total purine content before and after boiling 
+because they were already pre-cooked and ready-to-eat (RTE). These findings suggest that cooked meats 
+should be considered when developing sampling plans for the analysis of purine content in foods. 
+Furthermore, the inclusion of these products in databases could facilitate more accurate dietary 
+estimations of total purine intake.  
+20 
+ 
+Table 2.  Meat cooking methodology at Texas Tech University and moisture losses after cooking. 
+Meat Cooking 
+method1 Cooking condition Weight loss (%) 
+(Mean ± SD) 
+Frankfurter (beef) Boiled Boiled in deionized water for 4-5 minutes 7.52 ± 1.35 
+Frankfurter  
+(mixed meat) Boiled Boiled in deionized water for 4-5 minutes 4.36 ± 1.95 
+Ground Beef 
+(73% lean) Pan-fried Cooked in skillet at 400°F (204.4°C) until 
+internal temperature reached 165°F (73.8°C) 49.59 ± 0.93 
+Ground Beef 
+(93% lean) Pan-fried Cooked in skillet at 400°F (204.4°C) until 
+internal temperature reached 165°F (73.8°C) 35.08 ± 4.90 
+Bacon Pan-fried 
+Cooked in griddle at 400°F (204.4°C), flipped 
+every 3-4 minutes until internal temperature 
+reached 145°F (62.8°C) 
+70.06 ± 2.42 
+Pork Sausage Pan-fried 
+Cooked in skillet at 375°F (190.6°C) for 2 
+minutes and 15 seconds on each side until 
+internal temperature reached 155°F (68.3°C) 
+29.34 ± 5.76 
+Chicken Breast Roasted Cooked in oven to 375°F (190.6°C) until internal 
+temperature reached 165°F (73.8°C) 25.29 ± 3.22 
+Pork Loin Pan-fried 
+Cooked in griddle at 400°F (204.4°C), flipped 
+every 5-6 minutes until internal temperature 
+reached 165°F (73.8°C) 
+36.80 ± 4.24 
+Beef Chunk Roast Braised 
+Braised in Dutch oven at 250°F (121.1°C) with 
+deionized water until internal temperature 
+reached 185°F (85.0°C) 
+35.04 ± 4.50 
+1 Meats were prepared without added oils, spices, butter, or other added ingredients 
+There was stratification of uricogenic bases across categories and food types. Hypoxanthine was the 
+predominant purine base found in meats and seafood, whereas dairy, vegetables, and legumes were 
+primarily composed of adenine and guanine. The foods’ purine composition remained stable after cooking 
+except for ground beef (“73% lean meat / 27% fat” and “93% lean meat / 7% fat”). In these samples, an 
+increase in the percentage of hypoxanthine and decreases in the percentages of adenine, guanine, and 
+xanthine after cooking were observed. These results suggest not all purines are distributed equally in and 
+across food types, and that for some foods, their purine composition may be impacted by heat and 
+processing factors. More research is warranted, but it is clear from these data that purine base composition 
+should likely be considered alongside total purine content when implementing dietary modifications. 
+Concentrations of uric acid in foods were measured and reported when they were present in the database 
+as a foundation for future research. Uric acid was not detected in most samples because it does not exist in 
+plants, and it is not the final metabolic product for almost all animal foods and seafoods studied. The 
+presence of uric acid in animal foods has only been reported in one publication (Havlik et al., 2010), in 
+which a significant amount of uric acid (51 mg/100 g) was detected in chicken liver. Chicken legs and 
+beef were also found to contain low levels of uric acid.  
+There are also studies on certain crustaceans, including American lobster (Battison, 2013) and land crab 
+(Horne, 1968), that report that these species have high blood and/or urine uric acid levels. In USDA data, 
+crab contained 32 mg/100 g uric acid. In addition, concentrations less than 1.0 mg/100 g were observed in 
+21 
+ 
+other foods including beef, dairy, poultry, sausage, and seafood categories. Unlike purines, the 
+bioavailability of dietary uric acid is largely unknown, although it is known that it can be potentially 
+absorbed through uric acid transporters in the intestine. The impact of uric acids in foods on SU levels has 
+not been studied, but the topic certainly warrants further research.   
+When differences in USDA’s data exist compared to published values from the literature, they may be 
+attributable to vegetable cultivars, animal species, geographic differences, agricultural and animal 
+husbandry methodology changes over time, and manufacturer processing disparities. The studies’ 
+sampling plan methodologies and analytical instrumentation may have also impacted measurements. 
+Statistical comparisons between USDA and literature data were not possible due to low (n) and data 
+access limitations. Overall, the finding in this study highlight a need for current data on the purine content 
+of foods, and a reevaluation of dietary guidance based on this for populations interested in lowering 
+purine consumption. 
+Dietary Supplement Samples 
+To facilitate analysis, products from the 5 DS categories were grouped based on their dosage form (tablet, 
+capsule, and powder). For instance, all brewer’s yeast tablet product results were averaged and included 
+in the database as one entry. This approach consolidated 14 total products into 7 entries in the database, 
+with each representing a distinct dosage form. 
+Dietary supplement data is presented in two formats: as “per serving unit” (Tab 4) and as “per serving 
+size” (Tab 5). The analytical results indicate that purine content in DS varied significantly across 
+categories, dosage form, and brand. Chlorella tablets exhibited the highest total amount of purines (76 
+mg/serving), while royal jelly capsules contained the lowest (1.5 mg/serving). In descending order of total 
+purine content per serving, the ranking was as follows: chlorella [tablet] > nucleotide complex [capsule] > 
+spirulina [tablet] > brewer's yeast [tablet] >spirulina [powder] > brewer's yeast [capsule] > royal jelly 
+[capsule]. 
+Adenine and guanine constituted over 90% of the total purines in all tested supplements. Notably, uric 
+acid was not detected in any of the DS samples. An internal comparison revealed that USDA’s analytical 
+DS data (in mg/100 g) were consistently lower in average total purines compared to published literature 
+values from Kaneko et al. (2014) apart from the spirulina tablet. This discrepancy is likely attributable to 
+geographical differences and variations in manufacturing processes. 
+While the brewer’s yeast capsule has a lower purine content per serving compared to brewer’s yeast 
+tablets, it is important to consider the recommended dosage of each product. One brewer’s yeast tablet 
+product suggests consuming 3 servings per day, with each serving consisting of 3 pills (totaling 9 pills 
+daily). Therefore, on a per-day basis, the brewer’s yeast DS analyzed in this study can provide a higher 
+purine intake than other supplements, despite its lower per-serving value. 
+Finally, reproducibility was assessed to ensure analytical consistency among the DS. The relative 
+standard deviation percentage for the total number of purines in brewer’s yeast was 0.7, indicating good 
+reproducibility of the sample preparation and extraction protocols. 
+22 
+ 
+E. Database Strengths and Limitations 
+This database has several strengths. To the authors’ knowledge, this is the first study to examine the 
+purine content in a commonly consumed purine-containing DS in the United States. Furthermore, the 
+database provides information for the contents of purine bases in foods covering many different food 
+categories, which were obtained from an extensive literature search and directly assayed analytical data. 
+Literature data were based on research findings from studies whose published reports met the minimal 
+criteria for inclusion using established data evaluation protocols. Compared to Release 1.0, USDA’s new 
+analytical data provides new and updated values for many foods collected from the U.S. market. The 
+foods selected for analysis were expected to contain substantial amounts of purines or were analyzed to 
+fill knowledge gaps. The selected foods are of relevance and importance to the U.S. population based on 
+dietary intake patterns extrapolated from WWEIA.  
+In addition, the purine contents in raw and cooked pairs of selected commonly consumed meat products 
+were included in the database. This data will assist with more accurate estimations of purine intake as 
+most animal products are cooked before consuming. Another strength is that multiple samples were 
+purchased and analyzed to understand variability. Finally, this analytical purine data allows for more 
+accurate intake estimates. Thus, the database can be used by clinicians, public health researchers, and 
+consumers to manage the dietary intake of purines and to facilitate treatment of subgroups diagnosed with 
+hyperuricemia and gout.  
+Limitations of the database include the possible significant discrepancies between the literature data and 
+USDA’s analytical data. It should be noted that nearly half of all literature data in the database originated 
+from studies performed 3 decades ago. Most of the literature data only presented a sample (n) of 1. 
+Because of this and the small sample (n) observed in the studies, statistical comparisons between USDA’s 
+analytical data and literature data were not possible. The USDA foods selected for analysis were partially 
+chosen based on their anticipated purine content presumed from literature data. Therefore, analytical data 
+for some food categories (e.g., fruits and sweets) are not included in this release. The analytical values 
+provide representative estimates of purine content in select foods, but do not necessarily represent values 
+for the entire U.S. market due to the nature of convenience sampling and product formulation differences 
+over time. Similarly, the DS published in this release are limited in sample size due to the scope of the 
+pilot study and the dosage forms selected; additional analyses are necessary to improve 
+representativeness. 
+F. Summary: Plans for Foods and Dietary Supplements in Future Data Releases 
+USDA’s Purine Database Release 2.0 includes analytical values for 61 food listings from 8 food groups 
+and 14 dietary supplements from a total of 5 categories. This release also includes previously published 
+literature data from 14 published international studies for 401 food listings from 20 food groups and 15 
+alcoholic beverages. These literature data are useful in further strengthening the scientific evidence base 
+for identifying additional U.S. foods for purine analysis and in determining foods of substantial purine 
+content for which expanded sample sizes would be advantageous. These new, validated analytical purine 
+data provide valuable insights into the purine content of commonly available foods and purine-rich DS in 
+the U.S. and may be used for improving estimates of dietary purine intake. This database is dynamic and 
+will be expanded in 2025 when additional analyses of U.S. foods become available. 
+23 
+ 
+USDA’s MAFCL will continue to procure and analyze foods from the U.S. food supply relevant for 
+estimating purine intake for the next data release. The long-term stability of purines may be assessed in 
+foods frozen in storage. In addition, literature-derived purine data on foodstuffs and DS published after 
+February 2023 will be identified and evaluated for potential inclusion using established criteria, and 
+acceptable data will be added to the database. 
+Additionally, a list of products which represent the total market share of purine-containing DS available 
+to U.S. consumers will be generated. New DS from each of the 5 categories will be selected for analytical 
+testing using website-scraping data from Amazon and Walmart. The web scraping will harvest the top 
+purine-containing DS for each category sold over a period of three months based on the: (1) total number 
+of units sold (sales volume), (2) number of consumer ratings over the products’ lifetime, (3) search result 
+ranking, (4) Amazon “best seller” status, and (5) Amazon sponsorship status (i.e., the presence of paid 
+advertisements when browsing products). DS identified from the web scraping will be evaluated under 
+USDA’s comprehensive DS sampling plan as detailed above. 
+A lot-to-lot variability study of the 14 purine-containing DS in this release is also planned to determine if 
+there are observable differences in purine content due to supplement product reformulation and logistical 
+and storage differences. Further testing may include organ meat-based and combination products (e.g., 
+chlorella and spirulina combination products). The ability of dosage units to release purines will be 
+assessed by dissolution and disintegration performance tests, including measurement of bioaccessibility 
+through assay of purine bases during and after in-vitro digestion of these DS in INFOGEST (Brodkorb et 
+al., 2019). 
+Information on the food and DS contents of various methylxanthines may prove a useful adjunct to this 
+purine dataset due to their chemical similarity, as well. Methylxanthines are chemical derivatives of the 
+purine base xanthine which are naturally present in some plants (e.g., cocoa and coffee beans, tea leaves, 
+cola nuts, guarana, and yerba mate). Methylxanthines such as caffeine, theobromine, and theophylline act 
+as central nervous system stimulants causing diuresis, cardiovascular and metabolic effects, bronchial 
+relaxation, and gastric acid secretion (Franco, Oñatibia-Astibia, & Martínez-Pinilla, 2013). Caffeine 
+decreases the concentration of urate by inhibiting xanthine oxidase activity (Chittoor & Voruganti, 2020). 
+Relatedly, coffee consumption has shown an inverse association with gout incidence (Choi et al., 2007). 
+Coffee consumption also has an inverse association with hyperuricemia in men but is associated with 
+increased hyperuricemia in women (Li et al., 2018). On the other hand, tea consumption does not appear 
+to be associated with hyperuricemia, urate levels, or gout (Zhang et al., 2017). Relevant foods and 
+supplements could be assayed and included as data fields to allow better estimates of total dietary intake 
+and as effect modifiers in studies of purine metabolism. A methylxanthine database containing analytical 
+data from the USDA-NIH NFNAP program is planned for release. 
+G. References 
+Aihemaitijiang, S., Zhang, Y., Zhang, L., Yang, J., Ye, C., Halimulati, M., Zhang, W., Zhang, Z. (2020). 
+The association between purine-rich food intake and hyperuricemia: A cross-sectional study in Chinese 
+adult residents. Nutrients, 12, 3835. 
+Azzeh, F.S., Al-Hebshia, A.H., Al-Essimiia, H.D., Alarjahb, M.A. (2017). Vitamin C supplementation 
+and serum uric acid: A reaction to hyperuricemia and gout disease. PharmaNutrition, 5, 47-51. 
+24 
+ 
+Battison, A.L. (2013). Subcuticular urate accumulation in an American lobster (Homarus americanus). 
+Veterinary Pathology, 50(3), 451-6. 
+Belanger, M.L., Wee, C.C., Mukamal, K.J., Miller, E.R., Sacks, F.M., Appel, L.J., Shmerling, R.H., Choi, 
+H.K., Juraschek, S.P. (2021). Effects on dietary macronutrients on serum urate: results from the 
+OmniHeart trial. American Journal of Clinical Nutrition, 113, 1593-1599.  
+Berger L., Gerson, C.D., Yu,T.F. (1977). The effect of ascorbic acid on uric acid excretion with a 
+commentary on the renal handling of ascorbic acid. American Journal of Medicine, 62, 71–76. 
+Beydoun, M.A., Fanelli-Kaczmarski, M.T., Canas, J.-A., Beydoun, H.A., Evans, M.K., Zonderman, A.B. 
+(2018). Dietary factors are associated with serum uric acid trajectory differentially by race among urban 
+adults. British Journal of Nutrition, 120, 935-935.  
+Bhagwat, S.A., Patterson, K.Y., Holden, J.M. (2009). Validation study of the USDA's data quality 
+evaluation system. Journal of Food Composition and Analysis, 22, 366-372.  
+Brodkorb, A., Egger, L., Alminger, M., Alvito, P., Assuncão, R., Balance, S., Bohn, T., Bourlieu-Lacanal, 
+C., Boutrou, R., Carrière, F., Clemente, A., Corredig, M., Dupont, D., Dufour, C., Edwards, C., Golding, 
+M., Karakaya, S., Kirkhus, B., Feunteun, S.L., Lesmes, U., Macierzanka, A., Mackie, A.R., Martins, C., 
+Marze, S., McClements, D.J., Ménard, O., Minekus, M., Portmann, R., Santos, C.N., Souchon, I., Singh, 
+R.P., Vegarud, G.E., Wickham, M.S.J., Weitschies, W., Recio, I. (2019). INFOGEST Static in Vitro 
+Simulation of Gastrointestinal Food Digestion. Nature Protocols, 14.4, 991–1014. 
+Brulé, D., Sarwar, G., Savoie, L. (1992). Changes in serum and urinary uric acid levels in normal human 
+subjects fed purine-rich foods containing different amounts of adenine and hypoxanthine. Journal of the 
+American College of Nutrition, 11, 353-358. 
+Butler, F, Alghubayshi, A, Roman, Y. (2021) The Epidemiology and Genetics of Hyperuricemia and 
+Gout across Major Racial Groups: A Literature Review and Population Genetics Secondary Database 
+Analysis. Journal of Personalized Medicine, 11(3), 231. 
+Chen-Xu, M., Yokose, C., Rai, S.K., Pillinger, M.H., Choi, H.K. (2019).  Contemporary prevalence of 
+gout and hyperuricemia in the United States and decadal trends: the National Health and Nutrition 
+Examination Survey, 2007-2016. Arthritis & Rheumatology,71, 991-999. 
+Choi, H.K., Atkinson, K., Karlson, E.W., Willett, W., Curhan, G. (2004). Purine-rich foods, dairy and 
+protein intake, and the risk of gout in men. New England Journal of Medicine, 350, 1093-1103. 
+Choi, H.K., Liu, S., Curhan, G. (2005). Intake of purine-rich foods, protein, and dairy products and 
+relationship to serum levels of uric acid. Arthritis & Rheumatism, 52(1), 283-289.  
+Choi, H.K., Willett, W., Curhan, G. (2007). Coffee consumption and risk of incident gout in men: a 
+prospective study. Arthritis & Rheumatism, 56(6), 2049-2055. 
+Choi, H.K., Gao, X., Curhan, G. (2009). Vitamin C intake and the risk of gout in men, A prospective 
+study. Archives of Internal Medicine 169(5), 502-507. 
+25 
+ 
+Chittoor, G., Voruganti, V. (2020). Hyperuricemia and Gout. In R. Caterina, J. Martinez, & M. Kohlmeier 
+(Eds.), Principles of Nutrigenetics and Nutrigenomics: Fundamentals of Individualized Nutrition (pp. 
+389-394). Academic Press: Cambridge MA. 
+Cipolletta, E., Tata, L.J., Nakafero, G., Avery, A.J., Mamas, M.A., Abhishek, A. (2022). Association 
+between gout flare and subsequent cardiovascular events among patients with gout. Journal of American 
+Medical Association, 328(5), 440-450. 
+Clifford, A.J., Riumallo, J.A., Young, V.R., Scrimshaw, N.S. (1976). Effects of oral purines on serum and 
+urinary uric acid of normal, hyperuricaemic and gouty humans. Journal of Nutrition, 106, 428–5.  
+Dalbeth, N., Ames, R., Gamble, G.D., Horne, A., Wong, S., Kuhn-Sherlock, B., MacGibbon, A., 
+McQueen, F.M., Reid, I.R., Palmano, K. (2012). Effects of skim milk powder enriched with 
+glycomacropeptide and G600 milk fat extract on frequency of gout flares: a proof-of-concept randomised 
+controlled trial. Annals of the Rheumatic Diseases, 71. 929-934. 
+FitzGerald, J.D., Dalbeth, N., Mikuls, T., Brignardello-Petersen, R., Guyatt, G., Abeles, A.M., Gelber, 
+A.C., Harrold, L.R., Khanna, D., King, C., Levy,G., Libbey, C., Mount, D., Pillinger, M.H., Rosenthal, 
+A., Singh, J.A., Sims, J.E., Smith, B.J., Wenger. N.S., Bae, S.S., Danve, A., Khanna, P.P., Kim, S.C., 
+Lenert, A., Poon, S., Qasim, A., Sehra, S.T., Sharma, T.S.K., Toprover, M., Turgunbaev, M., Zeng, L., 
+Zhang, M.A., Turner, A.S., Neogi, T. (2020). American College of Rheumatology Guideline for the 
+Management of Gout. Arthritis Care & Research, 72 (6), 744–760. 
+Franco, R., Oñatibia-Astibia, A., Martínez-Pinilla, E. (2013). Health benefits of methylxanthines in cacao 
+and chocolate. Nutrients, 18;5 (10), 4159–4173. 
+GBD 2021 Gout Collaborators. (2024). Global, regional, and national burden of gout, 1990-2020, and 
+projections to 2050: a systematic analysis of the Global Burden of Disease Study 2021. The Lancet 
+Rheumatology, 6(8), e507-e517. 
+Gibson, T., Rodgers, A.V., Simmonds, H.A., Court-Brown, F., Todd, E., Meilton. V. (1983). A controlled 
+study of diet in patients with gout. Annals of Rheumatic Diseases, 42, 123–127. 
+Hak, A.E., Curhan, G.C., Grodstein, F., Choi, H.K. (2010). Menopause, postmenopausal hormone use and 
+risk of incident gout. Annals of Rheumatic Diseases, 69(7), 1305-1309. 
+Havlik, J., Plachy, V., Fernandez, J., Rada, V. (2010). Dietary purines in vegetarian meat analogues. 
+Journal of the Science of Food and Agriculture, 90(14), 2352-2357. 
+Haytowitz, D.B., Pehrsson, P.R. (2018). USDA’s National Food and Nutrient Analysis Program 
+(NFNAP) produces high-quality data for USDA food composition databases: Two decades of 
+collaboration, Food Chemistry, 238(1), 134-138. 
+Hisatome, I., Ichida, K., Mineo, I., Ohtahara, A., Ogino, K., Kuwabara, M., Ishizaka, N., et al.                  
+(2020). Japanese society of gout and uric & nucleic acids 2019: Guidelines for management of 
+hyperuricemia and gout 3rd edition. Gout and Uric & Nucleic Acids,.44 (Supplement), 1-40.  
+26 
+ 
+Holden, J.M., Bhagwat, S.A., Patterson, K.Y. (2002). Development of a multi-nutrient data quality 
+evaluation system. Journal of Food Composition and Analysis, 15, 339–348.  
+Holden, J.M., Bhagwat, S.A., Haytowitz, D.B., Gebhardt, S.E., Dwyer, J.T., Peterson, J., Beecher, G.R., 
+E
+ldridge, A.L., Balentine, D. (2005). Development of a database of critically evaluated flavonoids data:  
+application of USDA’s data quality evaluation system. Journal of Food Composition and Analysis, 18, 
+829-844.  
+Horne, F.R. (1968). Nitrogen excretion in crustacea. I. The herbivorous land crab Cardiosoma guanhumi 
+Latreille. Comparative Biochemistry and Physiology, 26(2), 687-95. 
+Hu, J-R., Yeh, H-C., Mueller, N.T., Appel, L.J., Miller, E.R., Maruthur, N.M., Jerome, G.J., Chang, A.R., 
+Gelber, A.C., Juraschek, S.P. (2021). Effects of a behavioral weight loss intervention and metformin 
+treatment on serum urate: results from a randomized clinical trial. Nutrients, 13, 2673.  
+Huang, H-Y., Appel, L.J., Choi, M.J., Gelber, A.C., Charleston, J., Norkus, E.P., Miller, E.R. (2005). The 
+effects of vitamin C supplementation on serum concentrations of uric acid. Arthritis & Rheumatism, 
+52(6), 1843-1847. 
+Huang, Z., Xie, N., Illes, P., Di Virgilio, F., Ulrich, H., Semyanov, A., Verkhratsky, A., Sperlagh, B., Yu, 
+S.G., Huang, C., Tang, Y. (2021). From purines to purinergic signalling: molecular functions and human 
+diseases. Signal Transduction and Targeted Therapy, 6(1), 162. 
+Inazawa, K., Sato, A., Kato, Y., Yamaoka, N., Fukuuchi, T., Yasuda, M., Mawatari, K., Nakagomi, K., 
+Kaneko, K (2014). Determination and profiling of purines in foods by using HPLC and LC-MS. 
+Nucleosides, Nucleotides & Nucleic Acids, 33(4-6), 439-444. 
+Jakse, B., Jakse, B., Pajek, M., Pajek, J. (2019). Uric Acid and Plant-Based Nutrition. 
+Nutrients,11:1736.Juraschek, S.P., Miller, E.R., Gelber, A.C. (2011). Effect of oral vitamin C 
+supplementation on serum uric acid: a meta-analysis of randomized controlled trials. Arthritis Care & 
+Research, 63(9), 1295-1306.  
+Juraschek, S.P., Gelber, A.C., Choi, H.K., Appel, L.J., Miller, E.R. (2016). Effects of the dietary 
+approaches to stop hypertension (DASH) diet and sodium intake on serum uric acid. Arthritis & 
+Rheumatology, 68, 3002-3009.  
+Juraschek, S.P., Miller, E.R., Wu, B., White, K., Charleston, J., Gelber, A.C., Rai, S.K., Carson, K.A., 
+Appel, L.J., Choi, H.K. (2021). A randomized pilot study of DASH patterned groceries on serum urate 
+individuals with gout. Nutrients, 13, 538. 
+Juraschek, S.P., Gaziano, J.M., Glynn, R.J., Gomelskaya, N., Bubes, V.Y., Buring, J.E., Shmerling, R.H., 
+Sesso, H.D. (2022). Effects of vitamin C supplementation on gout risk: results from the Physicians’ 
+Health Study II trial. American Journal of Clinical Nutrition, 0: 1-8.  
+Kaneko, K., Aoyagi, Y., Fukuuchi, T., Inazawa, K., Yamaoka, N. (2014). Total purine and purine base 
+content of common foodstuffs for facilitating nutritional therapy for gout and hyperuricemia. Biological 
+and Pharmaceutical Bulletin, 37, 709-721.  
+27 
+ 
+Kaneko, K., Takayanagi, F., Fukuuchi, T., Yamaoka, N., Yasuda, M., Ken-ichi Mawatari, K., Fujimori, S. 
+(2020). Determination of total purine and purine base content of 80 food products to aid nutritional 
+therapy for gout and hyperuricemia. Nucleosides, Nucleotides & Nucleic Acids, 39 (10-12), 1449-1457. 
+Khanna, D., Fitzgerald, J.D., Khanna, P.P., Bae, S., Singh, M.K., Neogi, T., Pillinger, M.H., Merill, J., 
+Lee, S., Prakash, S., Kaldas, M., Gogia, M., Perez-Ruiz, F., Taylor, W., Lioté, F., Choi, H., Singh, J.A., 
+Dalbeth,,N., Kaplan, S., Niyyar, V., Jones, D., Yarows, S.A., Roessler, B., Kerr, G., King, C., Levy, G., 
+Furst, D.E., Edwards, N.L., Mandell, B., Schumacher, H.R., Robbins, M., Wenger, N., Terkeltaub, R. 
+(2012). American College of Rheumatology guidelines for management of gout. Part 1: systematic 
+nonpharmacologic and pharmacologic therapeutic approaches to hyperuricemia. Arthritis Care and 
+Research, 64, 1431-1446. 
+Kuo, C-F ., Grainge, M.J., Zhang, W., Doherty, M. (2015). Global epidemiology of gout: prevalence, 
+incidence and risk factors. Nature Reviews Rheumatology, 11(11),649-662.   
+Li, R., Yu, K., Li, C. (2018). Dietary factors and risk of gout and hyperuricemia: a meta-analysis and 
+systematic review. Asia Pacific Journal of Clinical Nutrition, 27(6), 1344-1356.   
+Luk, A.J., Simkin, P.A. (2005). Epidemiology of hyperuricemia and gout. American Journal of Managed 
+Care, 11, S435-442. 
+MacFarlane, L.A., Kim, S.C. (2014).  Gout: a review of non-modifiable and modifiable risk factors. 
+Rheumatic Disease Clinics of North America, 40(4), 581-604.  
+Mallen, C.D., Davenport, G., Hui, M., Nuki, G. Roddy, E. (2017). Improving management of gout in 
+primary care: a new UK management guideline. British Journal of General Practice, 67, 284-285. 
+Nelson, K.L., Voruganti, V.S. (2021). Purine metabolites and complex diseases: role of genes and 
+nutrients. Current Opinion in Clinical Nutrition and Metabolic Care, 24(4), 296-302. 
+Nuki, G., Simkin, P.A. (2006). A concise history of gout and hyperuricemia and their treatment. Arthritis 
+Research and Therapy, 8, S1. 
+Pennington, J.A.T., Spungen, J. (2012). Bowes & Church’s food values of portions commonly used, 19th 
+edition. eBook. ISBN: 9781451157475 1451157479 
+Pillinger, M.H., Keenan, R.T. (2008). Update on the management of hyperuricemia and gout. Bulletin of 
+the NYU Hospital for Joint Diseases, 66(3), 231-239. 
+Rai, S.K., Fung, T.T., Lu, N., Keller, S.F., Curhan, G.C., Choi, H.K. (2017). The dietary approaches to 
+stop hypertension (DASH) diet, Western diet, and risk of gout in men: prospective cohort study. The 
+BMJ, 357, 1794. 
+Rathbone, M.P., Middlemiss, P.J., Gysbers, J.W., Andrew, C., Herman, M.A.R., Reed, J.K., Ciccarelli, 
+R., Di Iorio, P., Caciagli, F. (1999). Trophic effects of purines in neurons and glial cells. Progress in 
+Neurobiology, 59(6), 663-690. 
+28 
+ 
+Richette, P., Bardin, T. (2017). Purine-rich foods: an innocent bystander of gout attacks? Annals of 
+Rheumatic Diseases, 71(9), 1435-1436. 
+Ridi, R.E., Tallima, H. (2017). Physiological functions and pathogenic potential of uric acid: a review. 
+Journal of Advanced Research, 8, 287-493.  
+Sarwar, G., Brulé, D. (1991). Assessment of the uricogenic potential of processed foods based on the 
+nature and quantity of dietary purines. Progress in Food and Nutrition Science, 15(3), 159-181. 
+Safiri, S., Kolahi, A.-A., Cross, M., Carson-Chahhoud, K., Hoy, D.; Almasi-Hashiani, A., Sepidarkish, 
+M., Ashrafi-Asgarabad, A., Moradi-Lakeh, M., Mansournia, M.A., et al. (2020). Prevalence, incidence, 
+and years lived with disability due to gout and its attributable risk factors for 195 countries and territories 
+1990–2017: A systematic analysis of the global burden of disease study 2017. Arthritis and 
+Rheumatology, 72, 1916–1927.  
+Stein, H.B., Hasan, A., Fox, I.H. (1976). Ascorbic acid-induced uricosuria: a consequence of 
+megavitamin therapy. Annals of Internal Medicine, 84, 385–388. 
+Todd, E., Wright, A. (2020). Gout: origin, treatment, and prevention. BIOS, 91(1), 66-73. 
+U.S. Department of Agriculture (USDA) and National Institutes of Health, Office of Dietary Supplements 
+(NIH ODS). (2021.) Statement of work: Development of a database on purines in foods and dietary 
+supplements. Unpublished. June 23, 2021.  
+U.S. Department of Agriculture (USDA), Agricultural Research Service (ARS). (2024a). FoodData 
+Central. https://fdc.nal.usda.gov/ (accessed on 21 October 2024). 
+U.S. Department of Agriculture (USDA), Agricultural Research Service (ARS). (2024b). 
+WWEIA/NHANES Related Links. https://www.ars.usda.gov/northeast-area/beltsville-md-
+bhnrc/beltsville-human-nutrition-research-center/food-surveys-research-group/docs/wweianhanes-related-
+links/ (accessed on 22 October 2024). 
+U.S. Department of Health and Human Services (USDHHS), National Institutes of Health Office of 
+Dietary Supplements (NIH ODS). Dietary Supplement Label Database (DSLD). Accessed June 22, 2021. 
+Available from: https://dsld.nlm.nih.gov/dsld/. 
+United States Pharmacopeia and National Formulary (USP-NF). (2018). <2040> Disintegration and 
+Dissolution of Dietary Supplements. 
+Vareldzis, R., Perez, A., Reisin, E. (2024). Hyperuricemia: An Intriguing Connection to Metabolic 
+Syndrome, Diabetes, Kidney Disease, and Hypertension. Current Hypertension Reports, 26, 237-245. 
+Villegas, R., Xiang, Y.B., Elasy, T., Xu, W.H., Cai, H., Cai, Q., Linton, M.F., Fazio, S., Zheng, W., Shu, 
+X.O. (2012). Purine-rich foods, protein intake, and the prevalence of hyperuricemia: The Shanghai Men’s 
+Health Study. Nutrition, Metabolism and Cardiovascular Diseases, 22, 409-416. 
+Wu, B., Roseland, J.M., Haytowitz, D.B., Pehrsson, P.R., Ershow, A.G. (2019). Availability and quality 
+of published data on the purine content of foods, alcoholic beverages, and dietary supplements. Journal of 
+Food and Composition Analysis, 84, 103281.  
+29 
+ 
+Xia, Y., Wu, Q.,Wang, H., Zhang, S., Jiang, Y., Gong, T., Xu, X., Chang, Q., Niu, K., Zhao, Y. (2020). 
+Global, regional and national burden of gout, 1990–2017: A systematic analysis of the global burden of 
+disease study. Rheumatology, 59, 1529–1538. 
+Yanai, H., Adachi, H., Hakoshima, M., Katsuyama, H. (2021). Molecular Biological and Clinical 
+Understanding of the Pathophysiology and Treatments of Hyperuricemia and Its Association with 
+Metabolic Syndrome, Cardiovascular Diseases and Chronic Kidney Disease. International Journal of 
+Molecular Sciences, 22(17), 9221. 
+Yokose, C, McCormick, N, Lu, N, Tanikella, S, Lin, K, Joshi, AD, Raffield, LM, Warner, E, Merriman, 
+T, Hsu, J, Saag, K, Zhang, Y, Choi, HK. (2023). Trends in Prevalence of Gout Among US Asian Adults, 
+2011-2018. JAMA Network Open, 6(4), e239501. 
+Zgaga, L., Theodoratou, E., Kyle, J., Farrington, S.M., Agakov, F., Tenesa, A., Walker, M., McNeill, G., 
+Wright, A.F., Rudan, I., Dunlop, M.G., Campbell, H. (2012). The association of dietary intake of purine-
+rich vegetables, sugar-sweetened beverages and dairy with plasma urate, in a cross-sectional study. Plos 
+One, 7, e38123. 
+ 
+Zhang, Y., Chen, C., Choi, H., Chaisson, C., Hunter, D., Niu, J., Neogi, T. (2012). Purine-rich foods 
+intake and recurrent gout attacks. Annals of the Rheumatic Diseases, 71(9), 1448-1453.  
+ 
+Zhang, Y., Cui, Y., Li, X., Li, L., Xie, X., Huang, Y, Deng, Y., Zeng, C., Lei, G. (2017). Is tea 
+consumption associated with the serum uric acid level, hyperuricemia or the risk of gout? A systematic 
+review and meta-analysis. BMC Musculoskeletal Disorders, 18, 95.  
+ 
+Zollner, N., Griebsch, A. (1974). Diet and gout. Advances in Experimental Medicine and Biology, 41, 
+435–442. 
+ 

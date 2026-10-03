@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-e2e
+*.local
+.DS_Store
+scripts/e2e_out/
+scripts/__pycache__/
+store/raw/
+*.jks
+*.keystore
+*.p8
