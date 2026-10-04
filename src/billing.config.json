@@ -1,6 +1,6 @@
 {
   "_説明": "RevenueCat の公開APIキー(秘密鍵ではない)。空のままなら購入ボタンは「購入の準備中です」になり、課金は走らない。",
-  "revenuecat": { "ios": "", "android": "" },
+  "revenuecat": { "ios": "appl_WtwSyvXtohvYvBcLKDvkgvXltVb", "android": "" },
   "entitlement": "full",
   "products": { "ios": "urica_full", "android": "urica_full" },
   "offering": "default",
