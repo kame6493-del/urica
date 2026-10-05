@@ -1,0 +1,31 @@
+1. Screen recording: attached to our reply in App Store Connect. It starts from app launch and shows the first-launch notice, registering a medicine and marking it as taken, logging water and a drink, entering two uric acid test results and the resulting graph, recording a gout attack on the foot diagram, the locked "visit summary" (Full Version feature) and the In-App Purchase screen.
+We are a solo developer and do not own a physical iOS device, so the recording was made on the iOS Simulator (newest iPhone model, latest iOS available in Xcode) with the same build configuration. The red circles in the video mark each tap. All data in the video was entered through the app's own screens during the recording (no pre-filled sample data). The app has no account and no server; the only device features it uses are local notifications (off by default) and the system share sheet / file picker for exporting and importing a backup, so the behavior is the same on a physical device. Sandbox purchases can be tested with the In-App Purchase submitted together with this version. Depending on the simulator's storefront the price may be shown in another currency; the price in Japan is JPY 800.
+
+2. Purpose and audience
+Urica Techo (ウリカ手帳) is a personal record book for people in Japan who were told their uric acid level is high at a health checkup, or who are being treated for gout. Users enter the uric acid values from their own blood tests and see them on a graph together with a 7.0 mg/dL line, an optional target line that the user decided with their doctor, and the days of gout attacks. They can also record medicines taken, water, alcohol (with the number of alcohol-free days in the last 7 days) and gout attacks (location on a foot diagram, pain 0-10).
+The app is a recording tool only. It does not diagnose, does not recommend treatment and does not suggest target values; this notice is shown on first launch, in the "その他" (More) tab and on the visit summary. It is not a medical device and does not measure anything.
+
+3. How to use (no login or account is needed)
+- Launch the app and read the first-launch notice, then tap "わかりました。はじめる" (OK, start).
+- 今日 (Today) tab: mark registered medicines as taken, add water (+200 mL / +500 mL), tap a drink to record it. Earlier days can be edited with the arrows.
+- 尿酸値 (Uric acid) tab: enter the test date and value; the graph and the difference from the previous test are shown.
+- 発作 (Attacks) tab: record a gout attack and mark the day it ended.
+- その他 (More) tab: medicines, target line, notifications, backup export/import, about, and the Full Version.
+All records are stored only on the device and the app works offline.
+
+4. External services
+- Apple In-App Purchase, managed through RevenueCat (purchase validation and restore). RevenueCat receives only an anonymous app user ID and the App Store transaction. No health records are sent.
+- No other servers, no login service, no analytics, no ads, no AI services.
+- Notifications are local notifications scheduled on the device (only if the user turns them on).
+- The app shows links to public pages of the Gout and Uric Acid Foundation of Japan (tufu.or.jp) as sources; tapping a link opens the web page outside the app.
+
+5. Regional differences
+The app is in Japanese only. It has no region-specific content or features and works the same in every region.
+
+6. Third-party material
+The app does not include any third-party database. It contains only three reference figures, each shown in the app with the source name and a link: the 7.0 mg/dL hyperuricemia threshold, the 400 mg/day purine guideline and the 2 liters/day water guideline, all short factual quotes from public pages of the Gout and Uric Acid Foundation of Japan (公益財団法人 痛風・尿酸財団): https://www.tufu.or.jp/gout/gout2/61 , https://www.tufu.or.jp/gout/gout4/447 , https://www.tufu.or.jp/gout/gout2/65 .
+Purine amounts of individual foods are not included; users enter values they looked up themselves (the app only links to the foundation's food table page). Drink sizes (e.g. 350 mL can) are container volumes, not health guidance. All text, icons and graphics in the app are our own work. The app is not affiliated with the foundation.
+
+7. In-App Purchase
+One non-consumable product, "完全版" (Full Version, product ID urica_full), JPY 800, one-time purchase (no subscription). It unlocks: the 3-year and all-time ranges of the uric acid graph, the visit summary (one screen with uric acid, attacks, medicine adherence and alcohol, exportable as text or CSV), purine logging with frequently eaten foods, per-medicine notification times, and a reminder the day before the next test. All other features (recording, 6-month/1-year graph, one daily medicine reminder, backup) are free with no limit on the number of records.
+How to reach it: その他 (More) tab > "完全版(買い切り)" card > "くわしく見る" (see details). It also opens when the user taps a locked feature, e.g. the "全期間" (all-time) range on the uric acid graph. The purchase screen shows the free/full comparison table and the buy button. Restore: on the same purchase screen, "以前に買った方はこちら(購入の復元)".
