@@ -118,3 +118,15 @@ Capacitor 8 + React 19 + Vite + TypeScript(お手本: 管理栄養士国試ア�
 4. Play Console でアプリを作り(jp.urica.app)、releases\urica-release.aab をクローズドテストに上げる。テスター用の Google グループを作り、store\tester_post.txt の URL 欄を埋めて募集する(12人×14日)
 5. iOS: このフォルダを非公開リポジトリに push し、Actions の iOS TestFlight を compile_only で1回 → 通ったら本番で TestFlight へ(シークレット4つはニガテ帳と同じ)
 6. 実機でまだ確かめていないこと(エミュレーター・実機が無いため): 通知の予約と許可の聞き方・共有シートでの書き出し・ファイル選択での読み込み・購入と復元。APK を手元の Android に入れて確かめるのが早い
+
+## 7. 見た目の作り直し 1.1.0(2026-10-10。Android だけ出し直す)
+持ち主が ChatGPT に作らせた UI の見本 8枚とアイコン案(design/ref/。git には入れない。元は Downloads\urica_ref_1〜9)に寄せて作り直した。機能・課金(urica_full・entitlement full・買い切り1つ・値段はストアの値)・出典つきの3つの数字・医療判断をしない旨・食品のプリン体量を収録しない方針・Play のカテゴリと申告は変えていない。iOS はこの版では出し直さない(ASC は触っていない。iOS の AppIcon と起動画面の絵だけは同じ絵に差し替わっている)。
+
+- 下のタブ: ホーム・記録・グラフ・まとめ・設定(見本どおり)。発作の一覧は「記録」の中の切り替え。検査値の入力は別の画面に分けた。購入が終わったら完了の画面を出す
+- 絵: 見本から切り出した(scripts/ref_art.py → src/assets/art/)。人物・医師・足(右足は左足の反転)・お酒の器・お薬・空の状態・完全版の絵。線のアイコン(タブ等)は見本の小さすぎる絵を拡大すると崩れるので、同じ形の線で描いた
+- アイコン: scripts/icon_assets.py。元絵の地を2次式で見積もってノートだけを切り抜き、iOS 1024(不透明)・ストア 1024/512・Android 適応アイコン(前景=ノート、背景=#0A96B2 の単色。中心からの最遠点 0.295 で安全域 0.3056 の内側)・旧形式の四角と丸・起動画面・アプリ内のロゴを作る。確認画像 scripts/e2e_out/icon_check.png
+- 見本と違えた所: 尿酸値の「やや高め・高め・要注意」の段階は出典が無いので使わず、7.0(出典あり)と主治医と決めた目標だけで印を付ける/検査値の詳細・カレンダー・発作の傾向分析・パスコード・ウィジェット・印刷・水分の時刻記録・継続バッジ・食品の写真は今無い機能なので作らない/見本の値段は使わない。一覧は docs/compare_redesign_1〜8.png・compare_redesign_all.png(scripts/compare_redesign.py)
+- 退避: 作り直す前のアイコン・起動画面・ストア素材・1.0.0 の AAB・E2E の写真は _退避_2026-10-10_見た目の作り直し前\(git には入れない)
+- 確かめたこと: vitest 20件 通過/npm run build 通過/E2E `python scripts/e2e.py`(375 と 430 の2つの幅で全画面を撮る。scripts/e2e_out/w375・w430)139項目 ALL PASS・console error 0・横のはみ出し無し/App Review 用の自動操作(src/dev/reviewTour.ts)を新しい画面に合わせ、check_review_tour.py で購入画面まで進むのを確認
+- Android: versionCode 2 / versionName 1.1.0。releases\urica-release.aab(8.1MB)。鍵は今までの urica-upload(証明書 SHA-256 94:CA:DB:A9:…:4B:4A:F5:33 で 1.0.0 と同じ)
+- Play の素材: store/play/screenshots/shot_1〜5.png(1080x1920)・feature_1024x500.png・icon_512.png(scripts/store_shots.py。値段・「無料」が写ったら止まる)

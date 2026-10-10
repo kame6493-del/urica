@@ -1,8 +1,8 @@
 /**
  * App Review 用の画面録画で流す自動操作。VITE_REVIEW_TOUR=1 で作ったビルドだけで動く(製品版には入らない)。
  * 持ち主が iPhone を持っていないので、CI のシミュレーターでこれを流しながら録画する(.github/workflows/ios-review-video.yml)。
- * 起動(初回の注意)→ 薬を登録して飲んだ印 → 水分・お酒 → 尿酸値を2回記録してグラフ → 発作を記録
- * → その他(受診用のまとめは完全版)→ 完全版の購入画面。記録はすべて画面から入れる(見本データは使わない)。押した所に丸を出す。
+ * 起動(初回の注意)→ 記録: 薬を登録して飲んだ印 → 水分・お酒 → グラフ: 尿酸値を2回記録 → 発作を記録
+ * → まとめ(完全版の案内)→ 設定 → 完全版の購入画面。記録はすべて画面から入れる(見本データは使わない)。押した所に丸を出す。
  */
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -84,9 +84,10 @@ const ymd = (daysAgo: number) => {
 export async function runReviewTour() {
   await sleep(3500); // 初回の注意(診断・治療の判断はしない)を見せる
   await scrollSlow(document.body.scrollHeight, 1500);
-  await tap(text('わかりました。はじめる'), 2500);
+  await tap(text('注意を読みました。はじめる'), 2500);
 
-  // 今日: 薬を登録 → 飲んだ印
+  // 記録: 薬を登録 → 飲んだ印
+  await tab('記録');
   if (await tap(text('薬を登録する'), 2000)) {
     await type("input[placeholder='お薬手帳の名前どおりに']", 'フェブキソスタット');
     await type("input[placeholder='例 1錠']", '1錠');
@@ -99,34 +100,33 @@ export async function runReviewTour() {
   // 水分・お酒
   await tap(text('+200 mL'), 1000);
   await tap(text('+500 mL'), 1500);
-  await tap(() => true, 1500, '#card-drink .chip');
+  await tap(() => true, 1500, '#card-drink .drink');
   await scrollSlow(0, 1200); await sleep(1000);
 
   // 尿酸値: 2回分を記録 → グラフと前回との差
-  await tab('尿酸値');
-  await type('#ua-form input[type=date]', ymd(120));
-  await type("#ua-form input[placeholder='例 6.4']", '7.8');
-  await tap((b) => b.closest('#ua-form') !== null && text('記録する')(b), 1500);
-  await type('#ua-form input[type=date]', ymd(7));
-  await type("#ua-form input[placeholder='例 6.4']", '6.6');
-  await tap((b) => b.closest('#ua-form') !== null && text('記録する')(b), 1500);
+  await tab('グラフ');
+  for (const [days, v] of [[120, '7.8'], [7, '6.6']] as const) {
+    await tap(text('検査値を入力する'), 1500);
+    await type('#ua-form input[type=date]', ymd(days));
+    await type("#ua-form input[placeholder='例 6.4']", v);
+    await tap((b) => b.closest('#ua-form') !== null && text('この内容で保存する')(b), 1500);
+  }
   await scrollSlow(0, 1500); await sleep(2500);
 
   // 発作: 足の図で場所を選び、痛みを記録
-  await tab('発作');
-  if (await tap(text('発作を記録する'), 2000)) {
+  await tab('記録');
+  if (await tap((b) => b.closest('#card-attack') !== null && text('発作を記録')(b), 2000)) {
     await tap(() => true, 1200, ".feet .spot[aria-label='右足の親指']");
     await tap((b) => b.innerText.trim() === '7', 1200, '.pain button');
     await tap((b) => b.closest('.attack-form') !== null && text('記録する')(b), 2500);
   }
   await sleep(1500);
 
-  // その他: 受診用のまとめ(完全版の案内)→ 完全版の購入画面
-  await tab('その他');
+  // まとめ(完全版の案内)→ 設定 → 完全版の購入画面
+  await tab('まとめ');
+  await sleep(2500);
+  await tab('設定');
   await sleep(1000);
-  if (await tap((b) => b.closest('.menu') !== null && text('受診用のまとめ')(b), 3000)) {
-    await tap(label('もどる'), 1500);
-  }
   await tap(text('くわしく見る'), 3000);
   await scrollSlow(document.body.scrollHeight, 2500);
   await sleep(2500);

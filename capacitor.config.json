@@ -2,7 +2,7 @@
   "appId": "jp.urica.app",
   "appName": "ウリカ手帳",
   "webDir": "dist",
-  "backgroundColor": "#f6f4ef",
+  "backgroundColor": "#f3f7f9",
   "ios": { "contentInset": "never" },
   "android": { "allowMixedContent": false }
 }

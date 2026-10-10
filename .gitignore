@@ -12,3 +12,6 @@ store/raw/
 releases/
 android/local.properties
 *.dpapi
+
+_退避_*/
+design/ref/
