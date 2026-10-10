@@ -5,7 +5,10 @@ python scripts/store_shots.py
 - store/play/feature_1024x500.png
 アイコン(store/icon-1024.png・store/play/icon_512.png)は icon_assets.py が作る。
 iOS はこの版では出し直さないので store/ios/ は作り直さない。
-画面は見本の記録(架空)で撮る。値段と「無料」の文字は写さない(写っていたら止まる)。"""
+画面は見本の記録(架空)で撮る。値段と「無料」の文字は写さない(写っていたら止まる)。
+2026-10-10 持ち主「Claude 特有の背景をなくして」: 白っぽいグラデーションをやめ、アプリの青緑の濃い地+記録用紙の方眼・
+水のしずくの飾りにした。見出しはメイリオ太字(白)。前の版は store/_cream_backup_2026-10-10/play/。
+画面は毎回アプリを動かして撮る(組むだけの写真の置き場は無い)。dist-e2e を使う。"""
 import base64
 import os
 import sys
@@ -21,6 +24,13 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from e2e_util import serve  # noqa: E402
 
 FONT = '"Hiragino Sans","Noto Sans JP","Yu Gothic UI","Meiryo",sans-serif'
+HEAD = '"Meiryo",sans-serif'   # 見出し(メイリオ太字)
+# 青緑の濃い地に、記録用紙の方眼(細い白線)を重ねる
+TEAL_BG = ("background-color:#0a6b6e;"
+           "background-image:radial-gradient(70% 45% at 85% 8%,rgba(120,230,220,.35) 0,rgba(120,230,220,0) 100%),"
+           "linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),"
+           "linear-gradient(180deg,#0c7f82 0,#075457 100%);"
+           "background-size:auto,24px 24px,24px 24px,auto")
 
 
 def data_uri(name):
@@ -43,16 +53,18 @@ def frame_html(url, w, h, title, sub, app_w):
     app_h = int((h - cap_h) / scale) + 40
     left = int((w - app_w * scale) / 2)
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>
-html,body{{margin:0;width:{w}px;height:{h}px;overflow:hidden;font-family:{FONT};
- background:radial-gradient(120% 60% at 50% 0%,#dff4f2 0,#eef6f8 55%,#f3f7f9 100%)}}
-.cap{{height:{cap_h}px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 {int(w*0.05)}px;color:#16263a}}
-.cap b{{font-size:{int(w*0.066)}px;letter-spacing:.02em;line-height:1.3;font-weight:800}}
-.cap b em{{font-style:normal;color:#0b8184}}
-.cap span{{font-size:{int(w*0.034)}px;color:#4b5563;margin-top:{int(w*0.014)}px}}
+html,body{{margin:0;width:{w}px;height:{h}px;overflow:hidden;font-family:{FONT};{TEAL_BG}}}
+.cap{{height:{cap_h}px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 {int(w*0.05)}px;color:#fff}}
+.cap b{{font-family:{HEAD};font-size:{int(w*0.064)}px;letter-spacing:.01em;line-height:1.3;font-weight:700}}
+.cap b em{{font-style:normal;color:#aef3ea;border-bottom:3px dotted rgba(174,243,234,.8)}}
+.cap span{{font-size:{int(w*0.034)}px;color:#d5efec;margin-top:{int(w*0.014)}px}}
+.drop{{position:absolute;width:{int(w*0.06)}px;height:{int(w*0.06)}px;background:rgba(174,243,234,.28);border-radius:50% 0 50% 50%;transform:rotate(-45deg)}}
 .phone{{position:absolute;left:{left}px;top:{cap_h}px;width:{app_w}px;height:{app_h}px;transform:scale({scale});transform-origin:0 0;
- border-radius:44px 44px 0 0;overflow:hidden;background:#f3f7f9;border:10px solid #16263a;border-bottom:0;box-shadow:0 20px 50px rgba(22,38,58,.22)}}
+ border-radius:44px 44px 0 0;overflow:hidden;background:#f3f7f9;border:10px solid #0f2a33;border-bottom:0;box-shadow:0 20px 50px rgba(0,20,24,.45)}}
 iframe{{border:0;width:{app_w}px;height:{app_h}px;background:#f3f7f9}}
-</style></head><body><div class="cap"><b>{title}</b><span>{sub}</span></div>
+</style></head><body><div class="drop" style="left:{int(w*0.06)}px;top:{int(h*0.035)}px"></div>
+<div class="drop" style="right:{int(w*0.08)}px;top:{int(h*0.13)}px;transform:rotate(-45deg) scale(.6)"></div>
+<div class="cap"><b>{title}</b><span>{sub}</span></div>
 <div class="phone"><iframe id="app" src="{url}"></iframe></div></body></html>"""
 
 
@@ -89,14 +101,13 @@ def main():
             # Play のフィーチャー画像(1024x500)。絵は見本から切り出した物
             pg = b.new_page(viewport={"width": 1024, "height": 500})
             pg.set_content(f"""<html><head><style>
-body{{margin:0;width:1024px;height:500px;overflow:hidden;font-family:{FONT};color:#16263a;
- background:radial-gradient(90% 120% at 15% 10%,#e3f6f4 0,#f3f8fa 60%,#eaf3f6 100%);position:relative}}
+body{{margin:0;width:1024px;height:500px;overflow:hidden;font-family:{FONT};color:#fff;{TEAL_BG};position:relative}}
 .l{{position:absolute;left:64px;top:70px;width:640px}}
-.logo{{width:116px;height:116px;border-radius:26px;box-shadow:0 10px 24px rgba(11,129,132,.25)}}
-.t{{font-size:66px;font-weight:800;letter-spacing:.05em;margin-top:18px;line-height:1.1}}
-.s{{font-size:28px;color:#0b8184;font-weight:700;margin-top:10px}}
+.logo{{width:116px;height:116px;border-radius:26px;box-shadow:0 10px 24px rgba(0,20,24,.4)}}
+.t{{font-family:{HEAD};font-size:66px;font-weight:700;letter-spacing:.04em;margin-top:18px;line-height:1.1}}
+.s{{font-family:{HEAD};font-size:28px;color:#aef3ea;font-weight:700;margin-top:10px}}
 .f{{display:flex;gap:12px;margin-top:30px}}
-.f div{{white-space:nowrap;display:flex;align-items:center;gap:8px;background:#fff;border-radius:16px;padding:8px 14px 8px 8px;font-size:19px;font-weight:700;box-shadow:0 4px 12px rgba(22,38,58,.08)}}
+.f div{{white-space:nowrap;display:flex;align-items:center;gap:8px;background:#fff;color:#0f2a33;border-radius:16px;padding:8px 14px 8px 8px;font-size:19px;font-weight:700;box-shadow:0 4px 12px rgba(0,20,24,.25)}}
 .f img{{width:40px;height:40px}}
 .p{{position:absolute;right:40px;bottom:0;width:330px}}
 .c{{position:absolute;right:300px;top:46px;width:120px;opacity:.95}}
